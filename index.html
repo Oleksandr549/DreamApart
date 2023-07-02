@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230702220057" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230702220057">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230702220057">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230702220057" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+			<div class="header-top">
+				<div class="header__container">
+					<p>Wpisz kod rabatowy: <a href="#">wakacje</a> i zarezerwuj apartament w promocyjnej cenie</p>
+					<a href="#">Gwarancja najniższej ceny!</a>
+				</div>
+			</div>
+			<div class="header__container">
+				<div class="menu_lan-tel">
+
+					<div class="language">
+						<a href="#" class="language-pl language-pl-active"><picture><source srcset="img/flaga-polska.webp" type="image/webp"><img src="img/flaga-polska.png" alt="polska"></picture>PL</a>
+						<a href="#" class="language-en">EN<picture><source srcset="img/Flag_of_Great_Britain_(1707–1800).webp" type="image/webp"><img src="img/Flag_of_Great_Britain_(1707–1800).png" alt="eng"></picture></a>
+					</div>
+					<p><a href="tel:+48987654321">+48 987 654 321</a></p>
+				</div>
+			</div>
+			<div class="header-center">
+				<div class="header__container box-row">
+					<div class="header_border-bt">
+
+
+						<div class="logo"><img src="img/zloty poziom nie haslo.png" alt="logo"></div>
+						<div class="filters">
+							<button type="button" class="filter_btn">Miejsce</button>
+							<button type="button" class="filter_btn">Termin</button>
+							<button type="button" class="filter_btn">Ilość osób</button>
+							<button type="button" class="filter_btn filter-btn-active">Wyszukaj</button>
+						</div>
+
+						<div class="menu">
+
+							<div class="menu_nav nav">
+								<div class="btn_container">
+									<button type="button" class="btn-white"><span class="icon-map"></span>Mapa</button>
+									<button type="button" class="btn-white"><span class="icon-filter"></span> Filtry</button>
+								</div>
+								<button type="button" class="nav_search"><span class="icon-lupa"></span></button>
+								<div class="burger_menu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div class="nav-container">
+									<div class="nav-close close__container">
+										<img src="img/zloty poziom nie haslo.png" alt="logo">
+										<img class="close" src="img/icons/close.svg" alt="close">
+									</div>
+									<ul class="nav-list">
+										<li class="nav-item active"><a href="index.html">Strona główna</a></li>
+										<li class="nav-item"><a href="#">Obiekty</a></li>
+										<li class="nav-item"><a href="#">Oferty specjalne</a></li>
+
+										<li class="nav-item"><a href="#">Współpraca</a></li>
+										<li class="nav-item"><a href="#"><span class=" _icon-cart"></span>Blog </a></li>
+										<li class="nav-item"><a href="#">Panel właściciela</a></li>
+										<li class="nav-item"><a href="#">Kontakt</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="header__container">
+					<div class="header-bottom_filters " data-flickity='{ "draggable": false, "contain": true,"pageDots": false }'>
+
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku lore</p>
+
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku lore</p>
+
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku lore</p>
+
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku lore</p>
+
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+						<div class="carousel-cell"><img src="img/icons/icon-ski.svg" alt="ski">
+							<p>Przy stoku</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<div class="header-bottom-mobile">
+			<div class="btn_container">
+				<button type="button" class="btn-white"><span class="icon-filter"></span> Filtry</button>
+				<button type="button" class="btn-white"><span class="icon-map"></span>Mapa</button>
+				<button type="button" class="btn-white"><span class="icon-map"></span>Zaloguj się</button>
+			</div>
+		</div>
+		<main class="page">
+			<main class="main">
+
+				<section class="product_main">
+					<div class="product__container">
+						<div class="product_list">
+							<a href="product-cart.html" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><img src="img/apartamenty-pod-stokiem-pokoje-21769-1.png
+                     " alt="apartamenty"></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="product-cart.html" class="item item-big">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, dignissimos.</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="product-cart.html" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><img src="img/dream-apart-wisla-pokoje-15997-17.png                     " alt="apartamenty"></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="product-cart.html" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/IMG_6655.webp" type="image/webp"><img src="img/IMG_6655.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="#" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/IMG_2435.webp" type="image/webp"><img src="img/IMG_2435.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="#" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/asnyka5e-22.webp" type="image/webp"><img src="img/asnyka5e-22.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="#" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/IMG_5854.webp" type="image/webp"><img src="img/IMG_5854.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="#" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><img src="img/dream-apart-kozubnik-pokoje-18239-12.png                     " alt="apartamenty">
+									</div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="#" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/kozubnik_.webp" type="image/webp"><img src="img/kozubnik_.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="#" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/DSC08196.webp" type="image/webp"><img src="img/DSC08196.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+							<a href="#" class="item">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/IMG_3250.webp" type="image/webp"><img src="img/IMG_3250.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</a>
+						</div>
+						<a href="#" class="btn-gold">Zobacz wszystkie</a>
+					</div>
+				</section>
+				<section class="block_main">
+					<div class="block__container">
+						<h2 class="title-line title">Private apartments <span>with Hospitality</span></h2>
+						<p>We promise private, professionally-cleaned vacation rentals with 24/7 guest support so you can travel
+							without
+							worry.</p>
+					</div>
+				</section>
+				<section class="pluses_main">
+					<div class="pluses__container">
+						<div class="pluses-list">
+							<div class="pluses-item">
+								<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+								<h6>Best rate</h6>
+								<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+							</div>
+							<div class="pluses-item">
+								<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+								<h6>Best rate</h6>
+								<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+							</div>
+							<div class="pluses-item">
+								<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+								<h6>Best rate</h6>
+								<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+							</div>
+							<div class="pluses-item">
+								<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+								<h6>Best rate</h6>
+								<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+							</div>
+							<div class="pluses-item">
+								<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+								<h6>Best rate</h6>
+								<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+							</div>
+							<div class="pluses-item">
+								<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+								<h6>Best rate</h6>
+								<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+							</div>
+						</div>
+						<div class="pluses2-box">
+							<div>
+								<h5 class="title-line">Choose your adventure</h5>
+								<h2 class="title">
+									<span>Ski or sun? </span>Pick your fun!
+								</h2>
+								<p>From the highest peaks to the sunniest beaches, our homes give you access to outdoor activities right
+									outside your door.</p>
+							</div>
+							<div>
+								<picture><source srcset="img/pexels-fauxels-3182787.webp" type="image/webp"><img src="img/pexels-fauxels-3182787.png" alt="pluses-img"></picture>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="level_main ">
+					<div class="level__container">
+						<div>
+							<h2 class="title title-line">
+								<span>Rośniemy </span>dla Was
+							</h2>
+							<div class="level-box element-animation">
+								<p><span>10 </span> apartamentów</p>
+								<p><span>2</span> miasta</p>
+								<p><span>150</span> rezerwacji</p>
+								<p><span>20 000 zł</span> wypłaconych prowizji</p>
+							</div>
+						</div>
+						<div class="circle-container circle-animation">
+							<div class="text">2020</div>
+						</div>
+					</div>
+				</section>
+				<section class="block_main">
+					<div class="block__container box-row">
+						<div>
+							<p class="gold">Zapisz się do newslettera i otrzymaj 10% rabat na pierwszą rezerwację</p>
+							<h3>Chcesz rezerwować taniej? </h3>
+							<p>Co dwa tygodnie wysyłać będziemy na Twojego maila kody promocyjne!</p>
+						</div>
+						<form action="/submit" method="post">
+
+							<div class="title-line"> <input type="email" placeholder="Adres e-mail" name="email" required></div>
+							<button type="submit" class="btn-gold">Zapisz się</button>
+						</form>
+
+					</div>
+				</section>
+				<section class="media_main">
+					<div class="media__container">
+						<div class="icons-media">
+							<a href="#" class="icon-instagram"></a>
+							<a href="#" class="icon-facebook"></a>
+							<a href="#" class="icon-youtube"></a>
+						</div>
+						<div class="swiper mySwiper-media">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.36.55.png" alt="img"></div>
+								<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.37.07.png" alt="img"></div>
+								<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.37.22.png" alt="img"></div>
+								<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.37.37.png" alt="img"></div>
+								<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.36.55.png" alt="img"></div>
+								<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.36.55.png" alt="img"></div>
+							</div>
+
+						</div>
+						<div class="title-arrows-box">
+							<h2 class="title title-line"><span>Odwiedź nas w </span> social mediach</h2>
+							<div class="aroows-box">
+								<div class="swiper-button-prev-media"><span class="icon-p-left"></span></div>
+								<div class="swiper-button-next-media"><span class="icon-p-right"></span></div>
+							</div>
+
+
+
+
+						</div>
+					</div>
+				</section>
+				<section class="faq_main">
+					<div class="faq__container">
+						<h2 class="title title-line">
+							<span>Najczęściej zadawane </span>pytania
+						</h2>
+						<div class="faq-list">
+							<div class="faq-item">
+								<a href="#" class="spoiler-trigger btn-white faq-btn">
+									<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+								</a>
+								<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+									maxime quisquam
+									commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+									nemo. Temporibus dolore illo sint.</div>
+							</div>
+							<div class="faq-item">
+								<a href="#" class="spoiler-trigger btn-white faq-btn">
+									<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+								</a>
+								<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+									maxime quisquam
+									commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+									nemo. Temporibus dolore illo sint.</div>
+							</div>
+							<div class="faq-item">
+								<a href="#" class="spoiler-trigger btn-white faq-btn">
+									<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+								</a>
+								<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+									maxime quisquam
+									commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+									nemo. Temporibus dolore illo sint.</div>
+							</div>
+							<div class="faq-item">
+								<a href="#" class="spoiler-trigger btn-white faq-btn">
+									<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+								</a>
+								<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+									maxime quisquam
+									commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+									nemo. Temporibus dolore illo sint.</div>
+							</div>
+							<div class="faq-item">
+								<a href="#" class="spoiler-trigger btn-white faq-btn">
+									<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+								</a>
+								<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+									maxime quisquam
+									commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+									nemo. Temporibus dolore illo sint.</div>
+							</div>
+
+						</div>
+					</div>
+
+				</section>
+				<section class="block_main">
+					<div class="block__container">
+						<h5 class="title-line">Wisła, Szczyrk, Ustroń, Porąbka, Międzybrodzie, Bielsko-Biała</h5>
+						<h2 class="title"><span>Pokoje do wynajęcia </span> Dream Apart</h2>
+						<p>W górach jest wszystko, co kochamy – świeże powietrze, otaczająca nas natura i wspaniali, życzliwi ludzie. W
+							Dream Apart uważamy również, że Twój komfort podczas wypoczynku w Beskidzie Śląskim jest najważniejszy
+							Dlatego nasze pokoje do wynajęcia w Wiśle, Szczyrku, Ustroniu, Porąbce i Miedzybrodziu są przygotowane tak,
+							aby niczego Ci nie brakowało. W końcu każda chwila spędzona w górach powinna być magiczna, bez względu na
+							to, czy jesteś tu z rodziną czy znajomymi. Szukasz luksusowego apartamentu w Ustroniu, Szczyrku czy Wiśle,
+							aby w pełni korzystać z wszystkich miejscowych atrakcji? Zawsze chciałeś mieć z okna piękny widok na góry?
+							Nasze apartamenty do wynajęcia są świetnie zlokalizowane. Najpierw z łatwością do nich dojedziesz, a
+							następnie szybko trafisz na górskie szlaki, do centrum miasta czy na stok narciarski.</p>
+					</div>
+				</section>
+				<section class="block_main _block-bottom">
+					<div class="block__container">
+						<h5 class="title-line">Wisła, Szczyrk, Ustroń, Porąbka, Międzybrodzie, Bielsko-Biała</h5>
+						<h2 class="title"><span>Sprawdź gdzie nas </span> znajdziesz</h2>
+						<p>W górach jest wszystko, co kochamy – świeże powietrze, otaczająca nas natura i wspaniali, życzliwi ludzie. W
+							Dream Apart uważamy również, że Twój komfort podczas wypoczynku w Beskidzie Śląskim jest najważniejszy
+							Dlatego nasze pokoje do wynajęcia w Wiśle, Szczyrku, Ustroniu, Porąbce i Miedzybrodziu są przygotowane tak,
+							aby niczego Ci nie brakowało. W końcu każda chwila spędzona w górach powinna być magiczna, bez względu na
+							to, czy jesteś tu z rodziną czy znajomymi. Szukasz luksusowego apartamentu w Ustroniu, Szczyrku czy Wiśle,
+							aby w pełni korzystać z wszystkich miejscowych atrakcji? Zawsze chciałeś mieć z okna piękny widok na góry?
+							Nasze apartamenty do wynajęcia są świetnie zlokalizowane. Najpierw z łatwością do nich dojedziesz, a
+							następnie szybko trafisz na górskie szlaki, do centrum miasta czy na stok narciarski.</p>
+					</div>
+				</section>
+
+
+			</main>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer_list">
+					<ul>
+						<h3>Główne Biuro:</h3>
+						<address>
+							<a href="#"> ul. Grażyńskiego 8,<br> 43-450 Ustroń</a> <br><br>
+							<a href="tel:+48334712131">+48 33 471 21 31</a> <br>
+							<a href="mailto:info@dreamapart.pl">info@dreamapart.pl</a>
+
+						</address>
+					</ul>
+					<ul>
+						<h3>Mapa strony:</h3>
+						<li> <a href="index.html">Strona główna</a> </li>
+						<li> <a href="#">Obiekty</a></li>
+						<li><a href="#">Współpraca</a></li>
+						<li> <a href="#">Blog</a> </li>
+						<li> <a href="#">Kontakt</a> </li>
+					</ul>
+					<ul>
+						<a href="#"><span>Polityka prywatności</span></a>
+						<a href="#"><span>Regulamin</span></a>
+						<a href="#"><span>Regulamin konkursu</span></a>
+
+					</ul>
+				</div>
+				<div class="footer-hashtags">
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230702220057" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230702220057"></script>
+
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230702220057"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230702220057" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230702220057"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230702220057"></script>
+</body>
+
+</html>
