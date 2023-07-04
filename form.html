@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230705012020" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230705012020">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230705012020">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230705012020" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css?_v=20230705012020" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230705012020" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header dark-theme">
+
+			<div class="header-top active">
+				<div class="header__container">
+					<p>Wpisz kod rabatowy: <a href="#">wakacje</a> i zarezerwuj apartament w promocyjnej cenie</p>
+					<a href="#">Gwarancja najniższej ceny!</a>
+				</div>
+			</div>
+			<div class="header__container">
+				<div class="menu_lan-tel">
+
+					<div class="language">
+						<a href="#" class="language-pl language-pl-active"><picture><source srcset="img/flaga-polska.webp" type="image/webp"><img src="img/flaga-polska.png" alt="polska"></picture>PL</a>
+						<a href="#" class="language-en">EN<picture><source srcset="img/Flag_of_Great_Britain_(1707–1800).webp" type="image/webp"><img src="img/Flag_of_Great_Britain_(1707–1800).png" alt="eng"></picture></a>
+					</div>
+					<p><a href="tel:+48987654321">+48 987 654 321</a></p>
+				</div>
+			</div>
+			<div class="header-center">
+				<div class="header__container box-row">
+					<div class="header_border-bt" style="border: none;">
+
+
+						<div class="logo"><img src="img/zloty poziom nie haslo.png" alt="logo"></div>
+
+
+						<div class="menu">
+
+							<div class="menu_nav nav">
+
+								<div class="burger_menu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div class="nav-container">
+									<div class="nav-close close__container">
+										<img src="img/zloty poziom nie haslo.png" alt="logo">
+										<img class="close" src="img/icons/close.svg" alt="close">
+									</div>
+									<ul class="nav-list">
+										<li class="nav-item active"><a href="index.html">Strona główna</a></li>
+										<li class="nav-item"><a href="event.html">Obiekty</a></li>
+										<li class="nav-item"><a href="media.html">Oferty specjalne</a></li>
+
+										<li class="nav-item"><a href="listing-of-events.html">Współpraca</a></li>
+										<li class="nav-item"><a href="#"><span class=" _icon-cart"></span>Blog </a></li>
+										<li class="nav-item"><a href="contact.html">Panel właściciela</a></li>
+										<li class="nav-item"><a href="support.html">Kontakt</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</header>
+		<main class="page">
+			<section class="main_form">
+				<div class="form__container2">
+
+					<h3 class="title">Dołącz do Dream Apart i zacznij zarabiać!</h3>
+					<div class="form-box">
+						<!-- Form Steps / Progress Bar -->
+						<ul class="form-stepper ">
+							<!-- Step 1 -->
+							<li class="form-stepper-active form-stepper-list" step="1">
+								<a>
+									<span class="form-stepper-circle">
+										<span>1</span>
+									</span>
+
+								</a>
+							</li>
+							<!-- Step 2 -->
+							<li class="form-stepper-unfinished form-stepper-list" step="2">
+								<a>
+									<span class="form-stepper-circle text-muted">
+										<span>2</span>
+									</span>
+
+								</a>
+							</li>
+							<!-- Step 3 -->
+							<li class="form-stepper-unfinished form-stepper-list " step="3">
+								<a>
+									<span class="form-stepper-circle last-step text-muted">
+										<span>3</span>
+									</span>
+
+								</a>
+							</li>
+						</ul>
+						<!-- Step Wise Form Content -->
+						<form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data" method="POST">
+							<!-- Step 1 Content -->
+							<section id="step-1" class="form-step">
+								<div>
+									<h3>Wybierz rodzaj obiektu/apartamentu*</h3>
+
+									<div><input type="checkbox" name="type" id="type1" class="checkbox">
+										<label for="type1">Apartament</label>
+									</div>
+
+									<div>
+										<input type="checkbox" name="type" id="type2" class="checkbox">
+										<label for="type2">Domek</label>
+									</div>
+
+									<div>
+										<input type="checkbox" name="type" id="type3" class="checkbox">
+										<label for="type3">Hotel</label>
+									</div>
+
+									<div>
+										<input type="checkbox" name="type" id="type4" class="checkbox">
+										<label for="type4">Apartament typu studio</label>
+									</div>
+								</div>
+
+								<div>
+									<h3>Wpisz adres apartamentu*:</h3>
+									<input type="text" name="addres" id="addres" placeholder="Adres apartamentu" class="input">
+								</div>
+								<button class="button btn-navigate-form-step btn-gold" type="button" step_number="2">Dalej</button>
+
+							</section>
+							<!-- Step 2 Content, default hidden on page load. -->
+							<section id="step-2" class="form-step d-none">
+
+								<!-- Step 2 input fields -->
+								<div>
+									<h3>Liczba dostępnych dni w roku*</h3>
+									<div>
+										<input autocomplete="off" id="range" min="1" max="365" step="1" value="120" type="range" name="range" data-error="Error" placeholder="" oninput="rangeValue.innerText = `${this.value} dni`">
+										<label id="rangeValue" for="range">120 dni</label>
+									</div>
+								</div>
+								<div>
+									<h3>Link do strony apartamentu</h3>
+									<input type="text" name="addres" id="addres" class="input" placeholder="Wklej link do strony apartamentu">
+								</div>
+								<div class="btn-box">
+									<button class="button btn-navigate-form-step btn-gold" type="button" step_number="3">Dalej</button>
+								</div>
+
+							</section>
+							<!-- Step 3 Content, default hidden on page load. -->
+							<section id="step-3" class="form-step d-none">
+								<div>
+									<h3>Link do strony apartamentu</h3>
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Imię i nazwisko" class="input">
+									<input autocomplete="off" type="email" name="form[]" data-error="Error" placeholder="Adres e-mail" class="input">
+									<input autocomplete="off" type="tel" name="form[]" data-error="Error" placeholder="Telefon" class="input">
+								</div>
+
+								<div>
+									<div>
+										<input autocomplete="off" type="checkbox" name="form[]" data-error="Error" id="checkbox " class="checkbox">
+										<label for="checkbox">Zapoznałem się z informacją o administratorze i <br> przetwarzaniu danych. <a href="#">Więcej</a></label>
+									</div>
+								</div>
+
+
+
+								<div class="btn-box">
+
+									<button class="button btn-gold" type="submit">Proszę o kontakt!</button>
+								</div>
+
+							</section>
+						</form>
+
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer_list">
+					<ul>
+						<h3>Główne Biuro:</h3>
+						<address>
+							<a href="#"> ul. Grażyńskiego 8,<br> 43-450 Ustroń</a> <br><br>
+							<a href="tel:+48334712131">+48 33 471 21 31</a> <br>
+							<a href="mailto:info@dreamapart.pl">info@dreamapart.pl</a>
+
+						</address>
+					</ul>
+					<ul>
+						<h3>Mapa strony:</h3>
+						<li> <a href="index.html">Strona główna</a> </li>
+						<li> <a href="#">Obiekty</a></li>
+						<li><a href="#">Współpraca</a></li>
+						<li> <a href="#">Blog</a> </li>
+						<li> <a href="#">Kontakt</a> </li>
+					</ul>
+					<ul>
+						<a href="#"><span>Polityka prywatności</span></a>
+						<a href="#"><span>Regulamin</span></a>
+						<a href="#"><span>Regulamin konkursu</span></a>
+
+					</ul>
+				</div>
+				<div class="footer-hashtags">
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230705012020" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230705012020"></script>
+
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230705012020"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230705012020" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230705012020"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230705012020"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js?_v=20230705012020"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230705012020"></script>
+</body>
+
+</html>
