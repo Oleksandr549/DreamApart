@@ -1,20 +1,20 @@
 @charset "UTF-8";
 @font-face {
-  font-family: AlbertSans;
+  font-family: AlbertSans-Black;
   font-display: swap;
   src: url("../fonts/AlbertSans-Black.woff2") format("woff2"), url("../fonts/AlbertSans-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: AlbertSans;
+  font-family: AlbertSans-Bold;
   font-display: swap;
   src: url("../fonts/AlbertSans-Bold.woff2") format("woff2"), url("../fonts/AlbertSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: AlbertSans;
+  font-family: AlbertSans-Light;
   font-display: swap;
   src: url("../fonts/AlbertSans-Light.woff2") format("woff2"), url("../fonts/AlbertSans-Light.woff") format("woff");
   font-weight: 300;
@@ -28,21 +28,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: Avenir;
-  font-display: swap;
-  src: url("../fonts/Avenir-Black.woff2") format("woff2"), url("../fonts/Avenir-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir;
-  font-display: swap;
-  src: url("../fonts/Avenir-Book.woff2") format("woff2"), url("../fonts/Avenir-Book.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: AlbertSans;
+  font-family: AlbertSans-Medium;
   font-display: swap;
   src: url("../fonts/AlbertSans-Medium.woff2") format("woff2"), url("../fonts/AlbertSans-Medium.woff") format("woff");
   font-weight: 500;
@@ -51,15 +37,7 @@
 @font-face {
   font-family: Avenir;
   font-display: swap;
-  src: url("../fonts/Avenir-Light.woff2") format("woff2"), url("../fonts/Avenir-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir;
-  font-display: swap;
   src: url("../fonts/Avenir-Regular.woff2") format("woff2"), url("../fonts/Avenir-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -67,69 +45,6 @@
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir;
-  font-display: swap;
-  src: url("../fonts/Avenir-Heavy.woff2") format("woff2"), url("../fonts/Avenir-Heavy.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir;
-  font-display: swap;
-  src: url("../fonts/Avenir-Roman.woff2") format("woff2"), url("../fonts/Avenir-Roman.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir-Black;
-  font-display: swap;
-  src: url("../fonts/Avenir-Black.woff2") format("woff2"), url("../fonts/Avenir-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir-Heavy;
-  font-display: swap;
-  src: url("../fonts/Avenir-Heavy.woff2") format("woff2"), url("../fonts/Avenir-Heavy.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir-Book;
-  font-display: swap;
-  src: url("../fonts/Avenir-Book.woff2") format("woff2"), url("../fonts/Avenir-Book.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir;
-  font-display: swap;
-  src: url("../fonts/Avenir-Regular.woff2") format("woff2"), url("../fonts/Avenir-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir-Roman;
-  font-display: swap;
-  src: url("../fonts/Avenir-Roman.woff2") format("woff2"), url("../fonts/Avenir-Roman.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: icons;
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Avenir-Light;
-  font-display: swap;
-  src: url("../fonts/Avenir-Light.woff2") format("woff2"), url("../fonts/Avenir-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
 }
 [class^=icon-], [class*=" icon-"] {
@@ -445,7 +360,7 @@ ul.breadcrumb.right {
 ul.breadcrumb li {
   display: inline;
   text-align: left;
-  font: normal normal normal 8px/11px Avenir-Heavy;
+  font: normal normal normal 8px/11px AlbertSans;
   color: #000000;
 }
 
@@ -525,7 +440,7 @@ ul.breadcrumb li:hover {
 }
 
 h4.title {
-  font-family: Avenir-Heavy;
+  font-family: AlbertSans;
   font-size: 20px;
   line-height: 150%;
   color: white;
@@ -534,7 +449,7 @@ h4.title {
 
 h2.title {
   width: 100%;
-  font-family: Avenir-Heavy;
+  font-family: AlbertSans;
   color: white;
   font-size: 60px;
   line-height: 200%;
@@ -558,7 +473,7 @@ h2.title {
   }
 }
 h2.title span {
-  font-family: Avenir-Light;
+  font-family: AlbertSans;
   opacity: 0.24;
 }
 
@@ -654,14 +569,14 @@ h2.title span {
   }
 }
 .block_main h4 {
-  font-family: Avenir-Heavy;
+  font-family: AlbertSans;
   font-size: 20px;
   line-height: 150%;
   color: white;
   padding-bottom: 15px;
 }
 .block_main h3 {
-  font-family: Avenir-Heavy;
+  font-family: AlbertSans;
   color: white;
   font-size: 40px;
   line-height: 200%;
@@ -685,7 +600,7 @@ h2.title span {
 }
 .block_main h5 {
   width: 100%;
-  font-family: Avenir-Heavy;
+  font-family: AlbertSans;
   color: white;
   font-size: 12px;
   opacity: 0.5;
@@ -693,14 +608,14 @@ h2.title span {
 .block_main p {
   width: 100%;
   max-width: 950px;
-  font-family: Avenir-Roman;
+  font-family: AlbertSans;
   color: white;
   line-height: 130%;
 }
 .block_main p.gold {
   max-width: 100%;
   color: #CB9842;
-  font-family: Avenir-Heavy;
+  font-family: AlbertSans;
   font-size: 16px;
 }
 @media (max-width: 79.99875em) {
@@ -1116,10 +1031,10 @@ header.header-min .header-bottom {
   left: 0;
   background: #122B2E;
 }
-.header-bottom .carousel-cell.is-selected {
+.header-bottom .carousel-cell.active {
   position: relative;
 }
-.header-bottom .carousel-cell.is-selected::after {
+.header-bottom .carousel-cell.active::after {
   opacity: 1;
 }
 .header-bottom .carousel-cell p {
@@ -1383,58 +1298,6 @@ header.header-min .header-bottom {
   width: 100%;
   object-fit: cover;
   height: 10%;
-}
-
-.filters-popup {
-  overflow: auto;
-  background: rgba(167, 176, 177, 0.7647058824);
-  position: fixed;
-  width: 80vw;
-  height: auto;
-  z-index: 5;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.irs--round .irs-handle {
-  top: 26px;
-  width: 24px;
-  height: 24px;
-  border: 4px solid #CB9842;
-  background-color: white;
-  border-radius: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 255, 0.3);
-}
-
-.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
-  font-size: 14px;
-  line-height: 1;
-  text-shadow: none;
-  padding: 3px 5px;
-  background-color: black;
-  color: white;
-  border-radius: 4px;
-}
-
-.irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before {
-  position: absolute;
-  display: block;
-  content: "";
-  bottom: -6px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -3px;
-  overflow: hidden;
-  border: 3px solid transparent;
-  border-top-color: black;
-}
-
-.irs--round .irs-bar {
-  top: 36px;
-  height: 4px;
-  background-color: #CB9842;
 }
 
 @media (min-width: 103.75em) {
@@ -3412,6 +3275,314 @@ header.header-min .header-bottom {
 .form__container2 .btn-gold {
   padding: 10px 50px;
 }
+.filters-popup input[type=checkbox] {
+  height: 0;
+  width: 0;
+}
+.filters-popup .checkbox {
+  position: relative;
+  margin-right: 10px;
+}
+.filters-popup .checkbox::before {
+  position: absolute;
+  content: "";
+  font-weight: 900;
+  font-size: 12px;
+  top: -9px;
+  left: 0;
+  width: 15px;
+  padding: 2.7px;
+  height: 15px;
+  border: #CB9842 1px solid;
+  color: rgb(0, 0, 0);
+  line-height: 1em;
+  border-radius: 0.25em;
+}
+.filters-popup .checkbox:checked::before {
+  content: "✓";
+  padding: 1px;
+  color: white;
+  background: #CB9842;
+  border: #CB9842 1px solid;
+}
+
+.filters-popup {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+  transform: translate(-50%, 0%);
+  padding: 40px 100px;
+  position: relative;
+  box-shadow: 0px 0px 0px 99999px rgba(0, 0, 0, 0.2);
+  background: white;
+  position: fixed;
+  width: 70vw;
+  overflow: auto;
+  border-radius: 20px;
+  height: 90vh;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  max-width: 1000px;
+  min-width: 300px;
+}
+.filters-popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+.filters-popup::-webkit-scrollbar {
+  width: 0;
+}
+.filters-popup .close-popup2 {
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  border: 1px #122B2E solid;
+  padding: 5px;
+  border-radius: 50%;
+  background: #122B2E;
+}
+.filters-popup .border-row {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: rgba(112, 112, 112, 0.431372549);
+  margin: 40px 0;
+}
+.filters-popup .title-form {
+  font-size: 40px;
+}
+.filters-popup h2 {
+  font-size: 20px;
+  line-height: 130%;
+  color: #122B2E;
+  font-weight: 700;
+  text-align: center;
+}
+.filters-popup input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.filters-popup h4 {
+  font-size: 20px;
+  line-height: 130%;
+  color: #122B2E;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.filters-popup h6 {
+  font-size: 16px;
+  line-height: 130%;
+  color: #122B2E;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.filters-popup .irs--round {
+  width: 500px;
+  margin-bottom: 40px;
+}
+.filters-popup .irs--round .irs-min, .filters-popup .irs--round .irs-max {
+  display: none;
+}
+.filters-popup .cena-filter {
+  display: flex;
+  gap: 50px;
+}
+.filters-popup .cena-filter > div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  background: white;
+  border: 1px solid #CB9842;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+.filters-popup .cena-filter > div input {
+  outline: none;
+}
+.filters-popup .cena-filter > div:first-child::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  display: block;
+  position: relative;
+  bottom: 45%;
+  right: -111%;
+  background: #CB9842;
+}
+.filters-popup .radio {
+  display: flex;
+  width: 80%;
+  gap: 30px;
+}
+.filters-popup .radio div:first-child {
+  margin-right: 30px;
+}
+.filters-popup .radio div:first-child input[type=radio]::before {
+  padding: 15px 55px;
+}
+.filters-popup .radio > div {
+  position: relative;
+  margin-left: 47px;
+  margin-bottom: 30px;
+}
+.filters-popup .radio > div input[type=radio] {
+  outline: none;
+}
+.filters-popup .radio > div input[type=radio]:checked::before {
+  color: white;
+  background: #CB9842;
+  border: 1px solid #CB9842;
+}
+.filters-popup .radio > div input[type=radio]::before {
+  content: "";
+  font-size: 14px;
+  color: #122B2E;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 25px;
+  border-radius: 30px;
+  background: white;
+  border: 1px solid #CB9842;
+}
+.filters-popup .radio > div label {
+  font-size: 14px;
+  color: #122B2E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+}
+.filters-popup .radio2 {
+  display: flex;
+  width: 80%;
+  gap: 20px;
+}
+.filters-popup .radio2 > div {
+  position: relative;
+  flex: 1 0 30%;
+}
+.filters-popup .radio2 > div input[type=radio] {
+  outline: none;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+.filters-popup .radio2 > div input[type=radio]:checked::before {
+  color: white;
+  border: 3px solid #CB9842;
+}
+.filters-popup .radio2 > div input[type=radio]::before {
+  content: "";
+  font-size: 14px;
+  color: #122B2E;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 25px;
+  border-radius: 30px;
+  background: white;
+  border: 1px solid rgba(203, 153, 66, 0.5176470588);
+}
+.filters-popup .radio2 > div label {
+  font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #122B2E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  top: 40px;
+  left: 30px;
+  font-weight: 900;
+}
+.filters-popup .radio2 > div label img {
+  width: 100%;
+}
+.filters-popup .checkbox-form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin-bottom: 20px;
+}
+.filters-popup .checkbox-form > div {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  flex: 1 0 50%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.filters-popup .btn-box {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.filters-popup .btn-box .btn-gold {
+  font-size: 14px;
+}
+.filters-popup .btn-reset {
+  cursor: pointer;
+  font-weight: 600;
+  background: none;
+  border-bottom: 1px solid #707070;
+}
+
+.irs--round .irs-handle {
+  top: 26px;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #CB9842;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 255, 0.3);
+}
+
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
+  font-size: 14px;
+  line-height: 1;
+  text-shadow: none;
+  padding: 3px 5px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+}
+
+.irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -3px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-top-color: black;
+}
+
+.irs--round .irs-bar {
+  top: 36px;
+  height: 4px;
+  background-color: #CB9842;
+}
+
 .mc-table__weekday {
   text-align: center;
   padding: 0.5em 0;

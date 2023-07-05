@@ -5,16 +5,16 @@
 	<title>Apartment</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230705020303" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230705172332" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230705020303">
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230705020303">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230705172332">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230705172332">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230705020303" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230705172332" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css?_v=20230705020303" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230705020303" />
+	<link href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css?_v=20230705172332" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230705172332" />
 </head>
 
 <body>
@@ -970,16 +970,455 @@
 			</div>
 		</footer>
 	</div>
+	<div class="map-popup">
+		<img class="close-popup" src="img/icons/close.svg" alt="close">
+		<div id="map"></div>
+	</div>
+	<div class="map-popup">
+		<img class="close-popup" src="img/icons/close.svg" alt="close">
+		<div id="map2"></div>
+	</div>
+	<div class="filters-popup">
+		<h2>Filtry</h2>
+		<img class="close-popup2" src="img/icons/close.svg" alt="close">
+		<span class="border-row">
+		</span>
+		<h4>Przedział cenowy</h4>
+		<form action="" id="myForm">
+			<input type="range" class="js-range-slider range-filter" name="my_range" value="" data-type="double" data-min="0" data-max="1000" data-from="200" data-to="500" />
+			<div class="cena-filter">
+				<div>
+					<label for="cena">cena min.</label>
+					<input autocomplete="off" type="number" name="cena" data-error="Error" placeholder="zł 40" class="cena-filter-input">
+				</div>
+				<div>
+					<label for="cena2">cena maks.</label>
+					<input autocomplete="off" type="number" name="cena2" data-error="Error" placeholder="zł 25000+" class="cena-filter-input">
+				</div>
+			</div>
+			<span class="border-row">
+			</span>
+			<h4>Pokoje i łóżka</h4>
+			<h6>Sypialnie</h6>
+			<div class="radio">
 
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230705020303" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230705020303"></script>
 
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230705020303"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230705020303" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230705020303"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230705020303"></script>
-	<script src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js?_v=20230705020303"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230705020303"></script>
+				<div>
+					<label for="radio1">Dowolne</label>
+					<input autocomplete="off" id="radio1" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2">1</label>
+					<input autocomplete="off" id="radio2" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3">2</label>
+					<input autocomplete="off" id="radio3" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4">3</label>
+					<input autocomplete="off" id="radio4" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio5">4</label>
+					<input autocomplete="off" id="radio5" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio6">5</label>
+					<input autocomplete="off" id="radio6" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio7">6</label>
+					<input autocomplete="off" id="radio7" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+			</div>
+			<h6>Pokoje</h6>
+			<div class="radio">
+
+
+				<div>
+					<label for="radio1-2">Dowolne</label>
+					<input autocomplete="off" id="radio1-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2-2">1</label>
+					<input autocomplete="off" id="radio2-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3-2">2</label>
+					<input autocomplete="off" id="radio3-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4-2">3</label>
+					<input autocomplete="off" id="radio4-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio5-2">4</label>
+					<input autocomplete="off" id="radio5-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio6-2">5</label>
+					<input autocomplete="off" id="radio6-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio7-2">6</label>
+					<input autocomplete="off" id="radio7-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+			</div>
+			<h6>Łazienki</h6>
+			<div class="radio">
+
+
+				<div>
+					<label for="radio1-3">Dowolne</label>
+					<input autocomplete="off" id="radio1-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2-3">1</label>
+					<input autocomplete="off" id="radio2-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3-3">2</label>
+					<input autocomplete="off" id="radio3-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4-3">3</label>
+					<input autocomplete="off" id="radio4-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio5-3">4</label>
+					<input autocomplete="off" id="radio5-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio6-3">5</label>
+					<input autocomplete="off" id="radio6-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio7-3">6</label>
+					<input autocomplete="off" id="radio7-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+			</div>
+			<span class="border-row">
+			</span>
+			<h4>Rodzaj nieruchomości</h4>
+			<div class="radio2">
+
+
+				<div>
+					<label for="radio1-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio1-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio2-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio3-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio4-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+
+
+			</div>
+			<span class="border-row">
+			</span>
+			<h4>Udogodnienia</h4>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1" type="checkbox" name="checkbox-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2" type="checkbox" name="checkbox-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3" type="checkbox" name="checkbox-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4" type="checkbox" name="checkbox-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5" type="checkbox" name="checkbox-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6" type="checkbox" name="checkbox-6" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7" type="checkbox" name="checkbox-7" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8" type="checkbox" name="checkbox-8" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9" type="checkbox" name="checkbox-9" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10" type="checkbox" name="checkbox-10" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-1" type="checkbox" name="checkbox-1-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-1" type="checkbox" name="checkbox-2-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-1" type="checkbox" name="checkbox-3-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-1" type="checkbox" name="checkbox-4-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-1" type="checkbox" name="checkbox-5-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-1" type="checkbox" name="checkbox-6-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-1" type="checkbox" name="checkbox-7-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-1" type="checkbox" name="checkbox-8-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-1" type="checkbox" name="checkbox-9-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-1" type="checkbox" name="checkbox-10-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-1">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-2" type="checkbox" name="checkbox-1-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-2" type="checkbox" name="checkbox-2-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-2" type="checkbox" name="checkbox-3-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-2" type="checkbox" name="checkbox-4-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-2" type="checkbox" name="checkbox-5-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-2" type="checkbox" name="checkbox-6-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-2" type="checkbox" name="checkbox-7-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-2" type="checkbox" name="checkbox-8-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-2" type="checkbox" name="checkbox-9-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-2" type="checkbox" name="checkbox-10-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-2">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-3" type="checkbox" name="checkbox-1-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-3" type="checkbox" name="checkbox-2-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-3" type="checkbox" name="checkbox-3-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-3" type="checkbox" name="checkbox-4-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-3" type="checkbox" name="checkbox-5-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-3" type="checkbox" name="checkbox-6-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-3" type="checkbox" name="checkbox-7-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-3" type="checkbox" name="checkbox-8-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-3" type="checkbox" name="checkbox-9-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-3" type="checkbox" name="checkbox-10-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-3">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-4" type="checkbox" name="checkbox-1-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-4" type="checkbox" name="checkbox-2-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-4" type="checkbox" name="checkbox-3-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-4" type="checkbox" name="checkbox-4-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-4" type="checkbox" name="checkbox-5-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-4" type="checkbox" name="checkbox-6-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-4" type="checkbox" name="checkbox-7-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-4" type="checkbox" name="checkbox-8-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-4" type="checkbox" name="checkbox-9-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-4" type="checkbox" name="checkbox-10-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-4">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-5" type="checkbox" name="checkbox-1-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-5" type="checkbox" name="checkbox-2-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-5" type="checkbox" name="checkbox-3-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-5" type="checkbox" name="checkbox-4-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-5" type="checkbox" name="checkbox-5-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-5" type="checkbox" name="checkbox-6-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-5" type="checkbox" name="checkbox-7-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-5" type="checkbox" name="checkbox-8-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-5" type="checkbox" name="checkbox-9-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-5" type="checkbox" name="checkbox-10-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-5">Parawan</label>
+				</div>
+			</div>
+			<span class="border-row">
+			</span>
+			<div class="btn-box">
+				<input type="reset" class="btn-reset" value="Wyczyść wszystko">
+				<button class="button btn-gold" type="submit">Pokaż 35 wyników</button>
+			</div>
+		</form>
+
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230705172332" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230705172332"></script>
+
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230705172332"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230705172332" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230705172332"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230705172332"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js?_v=20230705172332"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230705172332"></script>
 </body>
 
 </html>

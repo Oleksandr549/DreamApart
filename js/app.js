@@ -48,7 +48,7 @@
       }
       if (null !== document.querySelector(".filter-content")) {
         const c = document.querySelectorAll(".filter_btns"),
-          n = document.querySelectorAll(".filter-content");
+          s = document.querySelectorAll(".filter-content");
         c.forEach((e, t) => {
           e.addEventListener("click", () => {
             return (
@@ -58,7 +58,7 @@
                   ? t.classList.remove("active", o === e)
                   : t.classList.toggle("active", o === e);
               }),
-              void n.forEach((t, o) => {
+              void s.forEach((t, o) => {
                 t.classList.contains("active")
                   ? t.classList.remove("active", o === e)
                   : t.classList.toggle("active", o === e);
@@ -69,14 +69,14 @@
         });
       }
       if (null !== document.querySelector(".btn-map")) {
-        const s = document.querySelectorAll(".btn-map"),
-          l = document.querySelectorAll(".map-popup");
+        const l = document.querySelectorAll(".btn-map"),
+          n = document.querySelectorAll(".map-popup");
         document.querySelector(".map-popup");
         document.querySelectorAll(".close-popup").forEach((e, t) => {
           e.addEventListener("click", () => {
             return (
               (e = t),
-              void l.forEach((t, o) => {
+              void n.forEach((t, o) => {
                 t.classList.contains("active")
                   ? t.classList.remove("active", o === e)
                   : t.classList.toggle("active", o === e);
@@ -85,11 +85,11 @@
             var e;
           });
         }),
-          s.forEach((e, t) => {
+          l.forEach((e, t) => {
             e.addEventListener("click", () => {
               return (
                 (e = t),
-                void l.forEach((t, o) => {
+                void n.forEach((t, o) => {
                   t.classList.contains("active")
                     ? t.classList.remove("active", o === e)
                     : t.classList.toggle("active", o === e);
@@ -102,31 +102,44 @@
       if (
         (null !== document.querySelector(".js-range-slider") &&
           $(".js-range-slider").ionRangeSlider({ skin: "round" }),
-        null !== document.querySelector(".filters"))
+        null !== document.querySelector(".map-popup"))
       ) {
         const i = document.querySelectorAll(".btn-map"),
-          a = document.querySelectorAll(".filters-popup");
-        document.querySelectorAll(".close-popup").forEach((e, t) => {
+          a = document.querySelectorAll(".map-popup"),
+          d = document.querySelectorAll(".close-popup"),
+          u = document.body;
+        i.forEach((e, t) => {
           e.addEventListener("click", () => {
             return (
               (e = t),
-              void a.forEach((t, o) => {
-                t.classList.contains("active")
-                  ? t.classList.remove("active", o === e)
-                  : t.classList.toggle("active", o === e);
+              i.forEach((t, o) => {
+                t.classList.toggle("active", o === e);
+              }),
+              a.forEach((t, o) => {
+                t.classList.toggle("active", o === e);
+              }),
+              a.forEach((e) => {
+                e.classList.contains("active") || (u.style.overflow = "auto");
+              }),
+              void a.forEach((e) => {
+                e.classList.contains("active") && (u.style.overflow = "hidden");
               })
             );
             var e;
           });
         }),
-          i.forEach((e, t) => {
+          d.forEach((e, t) => {
             e.addEventListener("click", () => {
               return (
                 (e = t),
-                void a.forEach((t, o) => {
-                  t.classList.contains("active")
-                    ? t.classList.remove("active", o === e)
-                    : t.classList.toggle("active", o === e);
+                a.forEach((t, o) => {
+                  t.classList.remove("active", o === e);
+                }),
+                i.forEach((t, o) => {
+                  t.classList.remove("active", o === e);
+                }),
+                void a.forEach((e) => {
+                  e.classList.contains("active") || (u.style.overflow = "auto");
                 })
               );
               var e;
@@ -191,15 +204,15 @@
         });
       }
       if (null !== document.querySelector(".circle-container")) {
-        function d(e) {
+        function m(e) {
           e.forEach((e) => {
-            e.isIntersecting && p();
+            e.isIntersecting && v();
           });
         }
-        let u = new IntersectionObserver(d, { threshold: [0.6] }),
-          m = document.querySelectorAll(".circle-animation");
-        for (let f of m) u.observe(f);
-        function p() {
+        let p = new IntersectionObserver(m, { threshold: [0.6] }),
+          f = document.querySelectorAll(".circle-animation");
+        for (let y of f) p.observe(y);
+        function v() {
           const e = document.querySelector(".circle-container"),
             t = (2 * Math.PI) / 36;
           for (let o = 0; o < 36; o++) {
@@ -220,36 +233,36 @@
         }
       }
       if (null !== document.querySelector(".element-animation")) {
-        function y(e) {
+        function h(e) {
           e.forEach((e) => {
             e.isIntersecting
               ? e.target.classList.add("active")
               : e.target.classList.remove("active");
           });
         }
-        let v = new IntersectionObserver(y, { threshold: [0.6] }),
-          h = document.querySelectorAll(".element-animation");
-        for (let S of h) v.observe(S);
+        let S = new IntersectionObserver(h, { threshold: [0.6] }),
+          w = document.querySelectorAll(".element-animation");
+        for (let g of w) S.observe(g);
       }
       if (null !== document.querySelector(".burger_menu")) {
-        const w = document.querySelector(".nav-container"),
-          g = document.querySelector(".header-top"),
-          q = document.querySelector(".close");
+        const q = document.querySelector(".nav-container"),
+          E = document.querySelector(".header-top"),
+          b = document.querySelector(".close");
         document
           .querySelector(".burger_menu")
           .addEventListener("click", function () {
-            w.classList.toggle("active"), g.classList.toggle("active");
+            q.classList.toggle("active"), E.classList.toggle("active");
           }),
-          q.addEventListener("click", function () {
-            w.classList.remove("active"), g.classList.toggle("active");
+          b.addEventListener("click", function () {
+            q.classList.remove("active"), E.classList.toggle("active");
           });
       }
       if (null !== document.querySelector(".btn-moreText")) {
-        const b = document.querySelector(".text-hide"),
-          E = document.querySelector(".btn-moreText");
-        b.classList.add("active"),
-          E.addEventListener("click", function () {
-            b.classList.toggle("active");
+        const k = document.querySelector(".text-hide"),
+          A = document.querySelector(".btn-moreText");
+        k.classList.add("active"),
+          A.addEventListener("click", function () {
+            k.classList.toggle("active");
           });
       }
       if (
@@ -266,19 +279,19 @@
           }),
         null !== document.querySelector(".header-top"))
       ) {
-        const k = document.querySelector(".header-top").offsetHeight + "px";
-        document.querySelector(".nav-container").style.marginTop = k;
+        const T = document.querySelector(".header-top").offsetHeight + "px";
+        document.querySelector(".nav-container").style.marginTop = T;
       }
       if (null !== document.querySelector(".page")) {
-        const A = document.querySelector(".header").offsetHeight + "px";
-        document.querySelector(".page").style.marginTop = A;
+        const _ = document.querySelector(".header").offsetHeight + "px";
+        document.querySelector(".page").style.marginTop = _;
       }
       const o =
         window.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
       if (null !== document.querySelector(".btn-more-swiper") && o > 390) {
-        function T() {
+        function x() {
           const e = document.querySelector(".image-counter"),
             t = document
               .querySelector(".product-cart-swiper")
@@ -320,11 +333,11 @@
               }),
             (e.innerHTML = r - c);
         }
-        T();
+        x();
       }
       if (null !== document.querySelector(".product-cart-swiper") && o <= 391) {
-        const _ = document.querySelector(".product-cart-swiper");
-        console.log(o), _.classList.add("swiper");
+        const P = document.querySelector(".product-cart-swiper");
+        console.log(o), P.classList.add("swiper");
         new Swiper(".product-cart-swiper", {
           slidesPerView: 1,
           speed: 1e3,
@@ -366,6 +379,53 @@
           customClearBTN: "Wyczyść daty",
         });
       }
+      if (null !== document.querySelector(".btn-filters1")) {
+        const C = document.querySelectorAll(".btn-filters1"),
+          M = document.querySelectorAll(".filters-popup"),
+          Y = document.querySelectorAll(".close-popup2"),
+          D = document.body;
+        console.log(M),
+          console.log(C),
+          console.log(Y),
+          C.forEach((e, t) => {
+            e.addEventListener("click", () => {
+              return (
+                (e = t),
+                C.forEach((t, o) => {
+                  t.classList.toggle("active", o === e);
+                }),
+                M.forEach((t, o) => {
+                  t.classList.toggle("active", o === e);
+                }),
+                M.forEach((e) => {
+                  e.classList.contains("active") || (D.style.overflow = "auto");
+                }),
+                void M.forEach((e) => {
+                  e.classList.contains("active") &&
+                    (D.style.overflow = "hidden");
+                })
+              );
+              var e;
+            });
+          }),
+          Y.forEach((e, t) => {
+            e.addEventListener("click", () => {
+              return (
+                (e = t),
+                M.forEach((t, o) => {
+                  t.classList.remove("active", o === e);
+                }),
+                C.forEach((t, o) => {
+                  t.classList.remove("active", o === e);
+                }),
+                void M.forEach((e) => {
+                  e.classList.contains("active") || (D.style.overflow = "auto");
+                })
+              );
+              var e;
+            });
+          });
+      }
     }),
     (function () {
       e = !0;
@@ -373,21 +433,21 @@
         o = t.hasAttribute("data-scroll-show"),
         r = t.dataset.scrollShow ? t.dataset.scrollShow : 500,
         c = t.dataset.scroll ? t.dataset.scroll : 1;
-      let n,
-        s = 0;
+      let s,
+        l = 0;
       document.addEventListener("windowScroll", function (e) {
-        const l = window.scrollY;
-        clearTimeout(n),
-          l >= c
+        const n = window.scrollY;
+        clearTimeout(s),
+          n >= c
             ? (!t.classList.contains("_header-scroll") &&
                 t.classList.add("_header-scroll"),
               o &&
-                (l > s
+                (n > l
                   ? t.classList.contains("_header-show") &&
                     t.classList.remove("_header-show")
                   : !t.classList.contains("_header-show") &&
                     t.classList.add("_header-show"),
-                (n = setTimeout(() => {
+                (s = setTimeout(() => {
                   !t.classList.contains("_header-show") &&
                     t.classList.add("_header-show");
                 }, r))))
@@ -396,7 +456,7 @@
               o &&
                 t.classList.contains("_header-show") &&
                 t.classList.remove("_header-show")),
-          (s = l <= 0 ? 0 : l);
+          (l = n <= 0 ? 0 : n);
       });
     })();
 })();
