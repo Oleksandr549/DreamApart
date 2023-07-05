@@ -1,5 +1,89 @@
 @charset "UTF-8";
 @font-face {
+  font-family: AlbertSans;
+  font-display: swap;
+  src: url("../fonts/AlbertSans-Black.woff2") format("woff2"), url("../fonts/AlbertSans-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: AlbertSans;
+  font-display: swap;
+  src: url("../fonts/AlbertSans-Bold.woff2") format("woff2"), url("../fonts/AlbertSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: AlbertSans;
+  font-display: swap;
+  src: url("../fonts/AlbertSans-Light.woff2") format("woff2"), url("../fonts/AlbertSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: AlbertSans;
+  font-display: swap;
+  src: url("../fonts/AlbertSans-Regular.woff2") format("woff2"), url("../fonts/AlbertSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  font-display: swap;
+  src: url("../fonts/Avenir-Black.woff2") format("woff2"), url("../fonts/Avenir-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  font-display: swap;
+  src: url("../fonts/Avenir-Book.woff2") format("woff2"), url("../fonts/Avenir-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: AlbertSans;
+  font-display: swap;
+  src: url("../fonts/AlbertSans-Medium.woff2") format("woff2"), url("../fonts/AlbertSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  font-display: swap;
+  src: url("../fonts/Avenir-Light.woff2") format("woff2"), url("../fonts/Avenir-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  font-display: swap;
+  src: url("../fonts/Avenir-Regular.woff2") format("woff2"), url("../fonts/Avenir-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  font-display: swap;
+  src: url("../fonts/Avenir-Heavy.woff2") format("woff2"), url("../fonts/Avenir-Heavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  font-display: swap;
+  src: url("../fonts/Avenir-Roman.woff2") format("woff2"), url("../fonts/Avenir-Roman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: Avenir-Black;
   font-display: swap;
   src: url("../fonts/Avenir-Black.woff2") format("woff2"), url("../fonts/Avenir-Black.woff") format("woff");
@@ -204,7 +288,7 @@ body {
 body {
   color: #122B2E;
   line-height: 1;
-  font-family: "Avenir";
+  font-family: "AlbertSans";
   font-size: 0.75rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -216,7 +300,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Avenir";
+  font-family: "AlbertSans";
   font-size: inherit;
 }
 
@@ -684,7 +768,7 @@ header.header-min .header-bottom {
 }
 @media (max-width: 47.99875em) {
   .header-top p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 .header-top p a {
@@ -703,7 +787,7 @@ header.header-min .header-bottom {
 }
 @media (max-width: 47.99875em) {
   .header-top a {
-    font-size: 10px;
+    font-size: 12px;
     display: block;
     top: 0px;
     position: relative;
@@ -758,7 +842,7 @@ header.header-min .header-bottom {
 .menu_lan-tel .language-pl {
   display: flex;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
 }
 .menu_lan-tel .language-en img,
@@ -820,7 +904,7 @@ header.header-min .header-bottom {
 .header-center .filter_btn {
   position: relative;
   white-space: nowrap;
-  font-size: 10px;
+  font-size: 12px;
   border-radius: 30px;
   transition: all 0.3s ease 0s;
   position: relative;
@@ -1039,7 +1123,7 @@ header.header-min .header-bottom {
   opacity: 1;
 }
 .header-bottom .carousel-cell p {
-  font-size: 10px;
+  font-size: 12px;
 }
 .header-bottom .carousel-cell img {
   width: 100%;
@@ -1281,15 +1365,16 @@ header.header-min .header-bottom {
 }
 .map-popup .marker-map_container h6 {
   padding: 10px 7px 2px 7px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   color: white;
   font-size: 9px;
 }
 .map-popup .marker-map_container p {
   padding: 0 7px 15px 7px;
-  font-family: Avenir-Roman;
+  font-family: AlbertSans;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
 }
 .map-popup .marker-map_container .btn-gold {
   margin: 0 18px 15px 18px;
@@ -1438,7 +1523,8 @@ header.header-min .header-bottom {
   padding-right: 50px;
 }
 .objects__container2 .product_list .item h2 {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   padding: 10px 15px 5px 15px;
   line-height: 150%;
   font-weight: 600;
@@ -1448,16 +1534,17 @@ header.header-min .header-bottom {
 .objects__container2 .product_list .item p {
   padding: 0px 15px 0px 15px;
   line-height: 130%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   font-weight: 400;
 }
 .objects__container2 .product_list .item_cena {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   padding: 7px 15px 0px 15px;
   line-height: 130%;
   width: 100%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   display: flex;
   gap: 15px;
@@ -1466,7 +1553,7 @@ header.header-min .header-bottom {
 .objects__container2 .product_list .item_cena p {
   padding: 0px 0px 0px 0px;
   line-height: 130%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   font-weight: 600;
 }
@@ -1681,15 +1768,16 @@ header.header-min .header-bottom {
 }
 .map__container2 .marker-map_container h6 {
   padding: 10px 7px 2px 7px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   color: white;
   font-size: 9px;
 }
 .map__container2 .marker-map_container p {
   padding: 0 7px 15px 7px;
-  font-family: Avenir-Roman;
+  font-family: AlbertSans;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
 }
 .map__container2 .marker-map_container .btn-gold {
   margin: 0 18px 15px 18px;
@@ -1803,7 +1891,8 @@ header.header-min .header-bottom {
   }
 }
 .rules__container2 .rules-item h6 {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   flex: 1 0 20%;
   color: #122B2E;
   line-height: 150%;
@@ -1811,7 +1900,7 @@ header.header-min .header-bottom {
 }
 .rules__container2 .rules-item p,
 .rules__container2 .rules-item span {
-  font-family: Avenir;
+  font-family: AlbertSans;
   flex: 1 0 80%;
   color: #122B2E;
   line-height: 150%;
@@ -1864,7 +1953,7 @@ header.header-min .header-bottom {
   margin-bottom: 25px;
 }
 .rules__container2 .info p {
-  font-family: Avenir;
+  font-family: AlbertSans;
   color: #122B2E;
   line-height: 140%;
   font-size: 14px;
@@ -2069,7 +2158,8 @@ header.header-min .header-bottom {
   box-shadow: none;
 }
 .objects2__container2 .product_list .item h2 {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   line-height: 150%;
   font-weight: 600;
   font-size: 12px;
@@ -2077,16 +2167,17 @@ header.header-min .header-bottom {
 }
 .objects2__container2 .product_list .item p {
   line-height: 130%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   font-weight: 400;
 }
 .objects2__container2 .product_list .item_cena {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   padding: 12px 15px 7px 15px;
   line-height: 130%;
   width: 100%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   display: flex;
   gap: 15px;
@@ -2095,7 +2186,7 @@ header.header-min .header-bottom {
 .objects2__container2 .product_list .item_cena p {
   padding: 0px 0px 0px 0px;
   line-height: 130%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   font-weight: 600;
 }
@@ -2193,7 +2284,8 @@ header.header-min .header-bottom {
   color: white;
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 16px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   white-space: nowrap;
   padding: 10px 10px;
   margin: 30px 0;
@@ -2284,7 +2376,8 @@ header.header-min .header-bottom {
 .characteristics__container2 .content-galeria .content-section1 h5 {
   margin-bottom: 35px;
   font-size: 12px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   text-transform: uppercase;
 }
 .characteristics__container2 .content-galeria .content-section2 {
@@ -2551,7 +2644,7 @@ header.header-min .header-bottom {
   padding: 3px 10px;
   border-radius: 30px;
   background: rgba(18, 43, 46, 0.8);
-  font-size: 10px;
+  font-size: 12px;
 }
 @media (max-width: 24.37375em) {
   .product-cart_main .product-cart-swiper .swiper-pagination-product-cart {
@@ -2581,7 +2674,7 @@ header.header-min .header-bottom {
   }
 }
 .product-cart_main .product-cart-swiper .btn-more-swiper {
-  font-size: 10px;
+  font-size: 12px;
   position: absolute;
   right: 50px;
   border-radius: 30px;
@@ -2605,7 +2698,7 @@ header.header-min .header-bottom {
   }
 }
 .product-cart_main .image-counter {
-  font-family: Avenir-Light;
+  font-family: AlbertSans;
 }
 .product-cart_main .swiper-slide {
   border-radius: 10px;
@@ -2637,7 +2730,7 @@ header.header-min .header-bottom {
   }
 }
 .product-cart_main .swiper-slide.item-big span {
-  font-size: 10px;
+  font-size: 12px;
   position: absolute;
   left: 0px;
   border-top-right-radius: 30px;
@@ -2684,7 +2777,8 @@ header.header-min .header-bottom {
   text-decoration: none;
 }
 .product-cart__container2 h5.title {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   font-size: 20px;
 }
 @media (max-width: 79.99875em) {
@@ -2722,7 +2816,8 @@ header.header-min .header-bottom {
 }
 .product-cart__container2 .share {
   font-size: 14px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   padding-bottom: 2px;
   border-bottom: 1px #122B2E solid;
 }
@@ -2733,7 +2828,7 @@ header.header-min .header-bottom {
     border-radius: 50%;
     padding: 5px 6px;
     z-index: 2;
-    font-size: 10px;
+    font-size: 12px;
   }
   .product-cart__container2 .share span {
     display: none;
@@ -2746,7 +2841,8 @@ header.header-min .header-bottom {
 }
 .product-cart__container2 h4 {
   font-size: 14px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
 }
 @media (max-width: 47.99875em) {
   .product-cart__container2 h4 {
@@ -2754,7 +2850,7 @@ header.header-min .header-bottom {
   }
 }
 .product-cart__container2 p {
-  font-family: Avenir-Roman;
+  font-family: AlbertSans;
   font-size: 14px;
   color: #122B2E;
 }
@@ -2765,11 +2861,13 @@ header.header-min .header-bottom {
 }
 .product-cart__container2 p.green {
   color: #377E25;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   text-decoration: underline;
 }
 .product-cart__container2 span {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   font-size: 14px;
 }
 @media (max-width: 47.99875em) {
@@ -2812,7 +2910,8 @@ header.header-min .header-bottom {
   flex-direction: column;
   gap: 20px;
   font-size: 14px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
 }
 @media (max-width: 47.99875em) {
   .product-cart__container2 .item {
@@ -2908,7 +3007,7 @@ header.header-min .header-bottom {
   }
 }
 .footer_list h3 {
-  font-family: Avenir-Heavy;
+  font-family: AlbertSans;
   line-height: 150%;
   font-size: 20px;
   color: #122B2E;
@@ -2923,7 +3022,7 @@ header.header-min .header-bottom {
 }
 .footer_list ul li a {
   position: relative;
-  font-family: Avenir-Light;
+  font-family: AlbertSans;
   font-style: normal;
   line-height: 200%;
   font-size: 12px;
@@ -2949,14 +3048,15 @@ header.header-min .header-bottom {
   background: #122B2E;
 }
 .footer_list ul a span {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   font-style: normal;
   line-height: 210%;
   font-size: 12px;
   color: #122B2E;
 }
 .footer_list address {
-  font-family: Avenir-Light;
+  font-family: AlbertSans;
   font-style: normal;
   line-height: 160%;
   font-size: 12px;
@@ -3000,7 +3100,7 @@ header.header-min .header-bottom {
 }
 .footer-hashtags ul li {
   padding-bottom: 5px;
-  font-family: Avenir-Light;
+  font-family: AlbertSans;
   font-style: normal;
   line-height: 200%;
   font-size: 12px;
@@ -3032,7 +3132,8 @@ header.header-min .header-bottom {
   width: 100%;
   text-align: center;
   font-size: 40px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   padding-top: 20px;
 }
 .form__container2 .form-step {
@@ -3071,7 +3172,7 @@ header.header-min .header-bottom {
   position: absolute;
   content: "";
   font-weight: 900;
-  font-size: 10px;
+  font-size: 12px;
   top: -10px;
   left: 0;
   width: 15px;
@@ -3105,7 +3206,7 @@ header.header-min .header-bottom {
 }
 .form__container2 .form-step > div > div label {
   line-height: 130%;
-  font-size: 10px;
+  font-size: 12px;
 }
 .form__container2 .form-step > div a {
   text-decoration: underline;
@@ -3113,12 +3214,13 @@ header.header-min .header-bottom {
 .form__container2 .form-step > div h3 {
   padding-bottom: 10px;
   font-size: 16px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
 }
 .form__container2 .form-step > div .input {
   padding: 0 10px;
   margin: 10px 0;
-  font-size: 10px;
+  font-size: 12px;
   border-bottom: 1px solid #707070;
   width: 100%;
   outline: none;
@@ -3394,7 +3496,8 @@ header.header-min .header-bottom {
   }
 }
 .product_main .product_list .item h2 {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   padding: 10px 15px 5px 15px;
   line-height: 150%;
   font-weight: 600;
@@ -3404,16 +3507,17 @@ header.header-min .header-bottom {
 .product_main .product_list .item p {
   padding: 0px 15px 0px 15px;
   line-height: 130%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   font-weight: 400;
 }
 .product_main .product_list .item_cena {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   padding: 7px 15px 0px 15px;
   line-height: 130%;
   width: 100%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   display: flex;
   gap: 15px;
@@ -3422,7 +3526,7 @@ header.header-min .header-bottom {
 .product_main .product_list .item_cena p {
   padding: 0px 0px 0px 0px;
   line-height: 130%;
-  font-size: 10px;
+  font-size: 12px;
   color: #122B2E;
   font-weight: 600;
 }
@@ -3544,7 +3648,7 @@ header.header-min .header-bottom {
 .faq_main .faq-content {
   padding: 10px 20px;
   font-size: 14px;
-  font-family: Avenir-Light;
+  font-family: AlbertSans;
   line-height: 150%;
 }
 .faq__container .title-btn-box, .faq__container2 .title-btn-box {
@@ -3554,7 +3658,8 @@ header.header-min .header-bottom {
   margin-bottom: 45px;
 }
 .faq__container .title-btn-box h3, .faq__container2 .title-btn-box h3 {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   font-size: 20px;
   line-height: 150%;
 }
@@ -3669,12 +3774,13 @@ header.header-min .header-bottom {
 .pluses-item h6 {
   line-height: 120%;
   font-size: 14px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
 }
 .pluses-item p {
   line-height: 120%;
   font-size: 14px;
-  font-family: Avenir-Roman;
+  font-family: AlbertSans;
 }
 .pluses-item img {
   max-width: 75px;
@@ -3712,13 +3818,14 @@ header.header-min .header-bottom {
   color: rgba(18, 43, 46, 0.3137254902);
   line-height: 120%;
   font-size: 12px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
 }
 .pluses2-box p {
   color: #122B2E;
   line-height: 130%;
   font-size: 12px;
-  font-family: Avenir-Roman;
+  font-family: AlbertSans;
 }
 .pluses2-box .title-line::before {
   left: -108%;
@@ -3771,7 +3878,8 @@ header.header-min .header-bottom {
   align-items: flex-start;
 }
 .media__container h3, .media__container2 h3 {
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   color: #122B2E;
   font-size: 20px;
   line-height: 150%;
@@ -3923,7 +4031,7 @@ header.header-min .header-bottom {
   transform: translate(0, 100px);
   white-space: nowrap;
   padding-right: 50px;
-  font-family: Avenir-Roman;
+  font-family: AlbertSans;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 20px;
@@ -4037,6 +4145,7 @@ header.header-min .header-bottom {
   opacity: 0;
   transition: all 1s ease 0s;
   font-size: 40px;
-  font-family: Avenir-Heavy;
+  font-weight: 700;
+  font-family: AlbertSans;
   color: #CB9842;
 }
