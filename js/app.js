@@ -204,14 +204,14 @@
         });
       }
       if (null !== document.querySelector(".circle-container")) {
-        function m(e) {
+        function p(e) {
           e.forEach((e) => {
             e.isIntersecting && v();
           });
         }
-        let p = new IntersectionObserver(m, { threshold: [0.6] }),
+        let m = new IntersectionObserver(p, { threshold: [0.6] }),
           f = document.querySelectorAll(".circle-animation");
-        for (let y of f) p.observe(y);
+        for (let y of f) m.observe(y);
         function v() {
           const e = document.querySelector(".circle-container"),
             t = (2 * Math.PI) / 36;
@@ -240,9 +240,9 @@
               : e.target.classList.remove("active");
           });
         }
-        let S = new IntersectionObserver(h, { threshold: [0.6] }),
-          w = document.querySelectorAll(".element-animation");
-        for (let g of w) S.observe(g);
+        let g = new IntersectionObserver(h, { threshold: [0.6] }),
+          S = document.querySelectorAll(".element-animation");
+        for (let w of S) g.observe(w);
       }
       if (null !== document.querySelector(".burger_menu")) {
         const q = document.querySelector(".nav-container"),
@@ -279,19 +279,19 @@
           }),
         null !== document.querySelector(".header-top"))
       ) {
-        const T = document.querySelector(".header-top").offsetHeight + "px";
-        document.querySelector(".nav-container").style.marginTop = T;
+        const _ = document.querySelector(".header-top").offsetHeight + "px";
+        document.querySelector(".nav-container").style.marginTop = _;
       }
       if (null !== document.querySelector(".page")) {
-        const _ = document.querySelector(".header").offsetHeight + "px";
-        document.querySelector(".page").style.marginTop = _;
+        const C = document.querySelector(".header").offsetHeight + "px";
+        document.querySelector(".page").style.marginTop = C;
       }
       const o =
         window.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
       if (null !== document.querySelector(".btn-more-swiper") && o > 390) {
-        function x() {
+        function T() {
           const e = document.querySelector(".image-counter"),
             t = document
               .querySelector(".product-cart-swiper")
@@ -333,11 +333,11 @@
               }),
             (e.innerHTML = r - c);
         }
-        x();
+        T();
       }
       if (null !== document.querySelector(".product-cart-swiper") && o <= 391) {
-        const P = document.querySelector(".product-cart-swiper");
-        console.log(o), P.classList.add("swiper");
+        const B = document.querySelector(".product-cart-swiper");
+        console.log(o), B.classList.add("swiper");
         new Swiper(".product-cart-swiper", {
           slidesPerView: 1,
           speed: 1e3,
@@ -357,6 +357,21 @@
           bodyType: "inline",
           closeOnBlur: !0,
           dateFormat: "DD.MM.YYYY",
+          theme: {
+            theme_color: "#CB9842",
+            main_background: "#f5f5f6",
+            active_text_color: "rgb(0, 0, 0)",
+            inactive_text_color: "rgba(0, 0, 0, 0.2)",
+            display: {
+              foreground: "rgba(255, 255, 255, 0.8)",
+              background: "#CB9842",
+            },
+            weekday: { foreground: "#CB9842" },
+            button: { success: { foreground: "#CB9842" } },
+            picked: { foreground: "#ffffff", background: "#CB9842" },
+            picked: { foreground: "#CB9842", background: "#CB9842" },
+            marcked: { foreground: "#CB9842" },
+          },
         });
       }
       if (null !== document.querySelector("#datepicker2")) {
@@ -379,47 +394,87 @@
           customClearBTN: "Wyczyść daty",
         });
       }
-      if (null !== document.querySelector(".btn-filters1")) {
-        const C = document.querySelectorAll(".btn-filters1"),
-          M = document.querySelectorAll(".filters-popup"),
-          Y = document.querySelectorAll(".close-popup2"),
-          D = document.body;
-        console.log(M),
-          console.log(C),
-          console.log(Y),
-          C.forEach((e, t) => {
+      if (null !== document.querySelector(".filters-popup") && o < 768) {
+        const x = document.querySelectorAll(".filter-btn-active"),
+          P = document.querySelectorAll(".filters-popup"),
+          M = document.querySelectorAll(".close-popup2"),
+          Y = document.body;
+        x.forEach((e, t) => {
+          e.addEventListener("click", () => {
+            return (
+              (e = t),
+              x.forEach((t, o) => {
+                t.classList.toggle("active", o === e);
+              }),
+              P.forEach((t, o) => {
+                t.classList.toggle("active", o === e);
+              }),
+              P.forEach((e) => {
+                e.classList.contains("active") || (Y.style.overflow = "auto");
+              }),
+              void P.forEach((e) => {
+                e.classList.contains("active") && (Y.style.overflow = "hidden");
+              })
+            );
+            var e;
+          });
+        }),
+          M.forEach((e, t) => {
             e.addEventListener("click", () => {
               return (
                 (e = t),
-                C.forEach((t, o) => {
+                P.forEach((t, o) => {
+                  t.classList.remove("active", o === e);
+                }),
+                void P.forEach((e) => {
+                  e.classList.contains("active") || (Y.style.overflow = "auto");
+                })
+              );
+              var e;
+            });
+          });
+      }
+      if (null !== document.querySelector(".btn-filters1") && o > 768) {
+        const D = document.querySelectorAll(".btn-filters1"),
+          j = document.querySelectorAll(".filters-popup"),
+          z = document.querySelectorAll(".close-popup2"),
+          V = document.body;
+        console.log(j),
+          console.log(D),
+          console.log(z),
+          D.forEach((e, t) => {
+            e.addEventListener("click", () => {
+              return (
+                (e = t),
+                D.forEach((t, o) => {
                   t.classList.toggle("active", o === e);
                 }),
-                M.forEach((t, o) => {
+                j.forEach((t, o) => {
                   t.classList.toggle("active", o === e);
                 }),
-                M.forEach((e) => {
-                  e.classList.contains("active") || (D.style.overflow = "auto");
+                j.forEach((e) => {
+                  e.classList.contains("active") || (V.style.overflow = "auto");
                 }),
-                void M.forEach((e) => {
+                void j.forEach((e) => {
                   e.classList.contains("active") &&
-                    (D.style.overflow = "hidden");
+                    (V.style.overflow = "hidden");
                 })
               );
               var e;
             });
           }),
-          Y.forEach((e, t) => {
+          z.forEach((e, t) => {
             e.addEventListener("click", () => {
               return (
                 (e = t),
-                M.forEach((t, o) => {
+                j.forEach((t, o) => {
                   t.classList.remove("active", o === e);
                 }),
-                C.forEach((t, o) => {
+                D.forEach((t, o) => {
                   t.classList.remove("active", o === e);
                 }),
-                void M.forEach((e) => {
-                  e.classList.contains("active") || (D.style.overflow = "auto");
+                void j.forEach((e) => {
+                  e.classList.contains("active") || (V.style.overflow = "auto");
                 })
               );
               var e;
