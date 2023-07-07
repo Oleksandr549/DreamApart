@@ -5,16 +5,17 @@
 	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230705181248" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230707214722" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230705181248">
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230705181248">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230707214722">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230707214722">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230705181248" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230707214722" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css?_v=20230705181248" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230705181248" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230707214722" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20230707214722">
 </head>
 
 <body>
@@ -88,7 +89,7 @@
 						<!-- Form Steps / Progress Bar -->
 						<ul class="form-stepper ">
 							<!-- Step 1 -->
-							<li class="form-stepper-active form-stepper-list" step="1">
+							<li class="form-stepper-active form-stepper-list btn-navigate-form-step" step="1" step_number="1">
 								<a>
 									<span class="form-stepper-circle">
 										<span>1</span>
@@ -97,7 +98,7 @@
 								</a>
 							</li>
 							<!-- Step 2 -->
-							<li class="form-stepper-unfinished form-stepper-list" step="2">
+							<li class="form-stepper-unfinished form-stepper-list btn-navigate-form-step" step="2" step_number="2">
 								<a>
 									<span class="form-stepper-circle text-muted">
 										<span>2</span>
@@ -106,7 +107,8 @@
 								</a>
 							</li>
 							<!-- Step 3 -->
-							<li class="form-stepper-unfinished form-stepper-list " step="3">
+
+							<li class="form-stepper-unfinished form-stepper-list btn-navigate-form-step" step="3" step_number="3">
 								<a>
 									<span class="form-stepper-circle last-step text-muted">
 										<span>3</span>
@@ -315,12 +317,12 @@
 			</div>
 		</footer>
 	</div>
+	<!-- <div class="map-popup">
+   <img class="close-popup" src="img/icons/close.svg" alt="close">
+   <div id="map"></div>
+</div> -->
 	<div class="map-popup">
-		<img class="close-popup" src="img/icons/close.svg" alt="close">
-		<div id="map"></div>
-	</div>
-	<div class="map-popup">
-		<img class="close-popup" src="img/icons/close.svg" alt="close">
+		<img class="close-popup" data-close src="img/icons/close.svg" alt="close">
 		<div id="map2"></div>
 	</div>
 	<div class="filters-popup">
@@ -330,15 +332,15 @@
 		</span>
 		<h4>Przedział cenowy</h4>
 		<form action="" id="myForm">
-			<input type="range" class="js-range-slider range-filter" name="my_range" value="" data-type="double" data-min="0" data-max="1000" data-from="200" data-to="500" />
+			<input type="range" class="js-range-slider range-filter" name="my_range" value="" data-type="double" data-min="0" data-max="9999" data-from="200" data-to="9999" />
 			<div class="cena-filter">
 				<div>
 					<label for="cena">cena min.</label>
-					<input autocomplete="off" type="number" name="cena" data-error="Error" placeholder="zł 40" class="cena-filter-input">
+					<input autocomplete="off" type="text" id="cena-number1" name="cena" data-error="Error" placeholder="zł 40" class="cena-filter-input">
 				</div>
 				<div>
 					<label for="cena2">cena maks.</label>
-					<input autocomplete="off" type="number" name="cena2" data-error="Error" placeholder="zł 25000+" class="cena-filter-input">
+					<input autocomplete="off" type="text" id="cena-number2" name="cena2" data-error="Error" placeholder="zł 25000+" class="cena-filter-input">
 				</div>
 			</div>
 			<span class="border-row">
@@ -755,15 +757,15 @@
 
 
 	</div>
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230705181248" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230705181248"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230707214722" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230707214722"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20230707214722"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230707214722"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230707214722" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230707214722"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230707214722"></script>
 
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230705181248"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230705181248" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230705181248"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230705181248"></script>
-	<script src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js?_v=20230705181248"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230705181248"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230707214722"></script>
 </body>
 
 </html>

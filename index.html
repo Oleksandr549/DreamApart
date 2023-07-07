@@ -5,16 +5,17 @@
 	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230705181248" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230707214722" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230705181248">
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230705181248">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230707214722">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230707214722">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230705181248" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230707214722" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css?_v=20230705181248" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230705181248" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230707214722" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20230707214722">
 </head>
 
 <body>
@@ -45,41 +46,51 @@
 						<div class="logo"><img src="img/zloty poziom nie haslo.png" alt="logo"></div>
 						<div class="filters">
 							<button type="button" class="filter_btn filter_btns">Miejsce
-								<ul class="filter-content content-city">
-									<li>Lorem, ipsum.</li>
-									<li>Lorem, ipsum.</li>
-									<li>Lorem, ipsum.</li>
-									<li>Lorem, ipsum.</li>
-									<li>Lorem, ipsum.</li>
-									<li>Lorem, ipsum.</li>
-									<li>Lorem, ipsum.</li>
-									<li>Lorem, ipsum.</li>
-									<a href="#" class="btn-gold">Wybierz</a>
-								</ul>
+
 							</button>
 
-							<button type="button" class="filter_btn" id="datepicker">Termin</button>
+							<button type="button" class="filter_btn" id="myDatePicker">Termin</button>
 							<button type="button" class="filter_btn filter_btns">Ilość osób
-								<ul class="filter-content content-people">
-									<li><span>Dorosli</span> <span>0</span></li>
-									<li><span>Dzieci</span> <span>0</span></li>
-									<a href="#" class="btn-gold">Wybierz</a>
-								</ul>
+
 							</button>
 
 							<button type="button" class="filter_btn filter-btn-active"><span class="icon-filter"></span><span>Wyszukaj</span></button>
+							<ul class="filter-content content-city">
+								<li>Lorem, ipsum.</li>
+								<li>Lorem, ipsum.</li>
+								<li>Lorem, ipsum.</li>
+								<li>Lorem, ipsum.</li>
+								<li>Lorem, ipsum.</li>
+								<li>Lorem, ipsum.</li>
+								<li>Lorem, ipsum.</li>
+								<li>Lorem, ipsum.</li>
+								<a href="#" class="btn-gold btn-close-filter">Wybierz</a>
+							</ul>
+							<ul class="filter-content content-people">
+								<li><span>Dorosli</span>
+									<div class="ci-input-number age">
+										<input class="ci-number" name="children" type="number" min="0" value="0" step="1">
+									</div>
+								</li>
+								<li><span>Dzieci</span>
+									<div class="ci-input-number age">
+										<input class="ci-number" name="children" type="number" min="0" value="0" step="1">
+									</div>
+								</li>
+								<a href="#" class="btn-gold btn-close-filter">Wybierz</a>
+							</ul>
 						</div>
 
 						<div class="menu">
 
 							<div class="menu_nav nav">
 								<div class="btn_container">
-									<button type="button" class="btn-white btn-map"><span class="icon-map"></span>Mapa</button>
+									<button type="button" class="btn-white btn-map" data-modal><span class="icon-map"></span>Mapa</button>
 
 									<button type="button" class="btn-white btn-filters1"><span class="icon-filter"></span>
 										Filtry</button>
 								</div>
-								<button type="button" class="nav_search"><span class="icon-lupa"></span></button>
+								<div class="nav_search search" data-search><input autocomplete="off" type="text" name="form[]" data-error="ERROR" placeholder="" class="input-search"><span class="icon-lupa"></span></div>
 								<div class="burger_menu">
 									<span></span>
 									<span></span>
@@ -97,7 +108,7 @@
 
 										<li class="nav-item"><a href="#">Współpraca</a></li>
 										<li class="nav-item"><a href="#"><span class=" _icon-cart"></span>Blog </a></li>
-										<li class="nav-item"><a href="form.html">Panel właściciela</a></li>
+										<li class="nav-item"><a href="#">Panel właściciela</a></li>
 										<li class="nav-item"><a href="#">Kontakt</a></li>
 									</ul>
 								</div>
@@ -171,33 +182,39 @@
 		</header>
 		<div class="header-bottom-mobile">
 			<div class="btn_container">
-				<button type="button" class="btn-white"><span class="icon-filter"></span> Filtry</button>
-				<button type="button" class="btn-white btn-map"><span class="icon-map"></span>Mapa</button>
-				<button type="button" class="btn-white"><span class="icon-map"></span>Zaloguj się</button>
+
+				<button type="button" class="btn-white btn-map" data-modal><span class="icon-map"></span>Mapa</button>
+				<a href="form.html" class="btn-white"><span class="icon-map"></span>Zaloguj się</a>
 			</div>
 		</div>
 		<main class="page">
 			<section class="product_main">
 				<div class="product__container">
 					<div class="product_list">
-						<a href="product-cart.html" data-category="a" class="item a">
+						<div data-category="a" class="item a">
 							<div class="product-swiper">
 								<div class="carousel-cell"><img src="img/apartamenty-pod-stokiem-pokoje-21769-1.png
                      " alt="apartamenty"></div>
+								<div class="carousel-cell"><img src="img/apartamenty-pod-stokiem-pokoje-21769-1.png
+                        " alt="apartamenty"></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="product-cart.html">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="product-cart.html" data-category="b" class="item item-big b">
-							<div class="product-swiper">
+						</div>
+						<div data-category="b" class="item item-big b">
+							<div class="product-swiper" data-flickity='{ "autoPlay": true }'>
+								<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+								<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
 								<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
 							</div>
 							<h2>
@@ -210,145 +227,165 @@
 								<p><span class="icon-star"></span>5,0</p>
 							</div>
 
-						</a>
-						<a href="product-cart.html" data-category="b" class="item b">
+						</div>
+						<div data-category="b" class="item b">
 							<div class="product-swiper">
 								<div class="carousel-cell"><img src="img/dream-apart-wisla-pokoje-15997-17.png                     " alt="apartamenty"></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="product-cart.html" data-category="a" class="item a">
+						</div>
+						<div data-category="a" class="item a">
 							<div class="product-swiper">
 								<div class="carousel-cell"><picture><source srcset="img/IMG_6655.webp" type="image/webp"><img src="img/IMG_6655.png" alt="apartamenty"></picture></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="#" data-category="a" class="item a">
+						</div>
+						<div data-category="a" class="item a">
 							<div class="product-swiper">
 								<div class="carousel-cell"><picture><source srcset="img/IMG_2435.webp" type="image/webp"><img src="img/IMG_2435.png" alt="apartamenty"></picture></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="#" data-category="c" class="item c">
+						</div>
+						<div data-category="c" class="item c">
 							<div class="product-swiper">
 								<div class="carousel-cell"><picture><source srcset="img/asnyka5e-22.webp" type="image/webp"><img src="img/asnyka5e-22.png" alt="apartamenty"></picture></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="#" data-category="c" class="item c">
+						</div>
+						<div data-category="c" class="item c">
 							<div class="product-swiper">
 								<div class="carousel-cell"><picture><source srcset="img/IMG_5854.webp" type="image/webp"><img src="img/IMG_5854.png" alt="apartamenty"></picture></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="#" data-category="a" class="item a">
+						</div>
+						<div data-category="a" class="item a">
 							<div class="product-swiper">
 								<div class="carousel-cell"><img src="img/dream-apart-kozubnik-pokoje-18239-12.png                     " alt="apartamenty">
 								</div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="#" data-category="b" class="item b">
+						</div>
+						<div data-category="b" class="item b">
 							<div class="product-swiper">
 								<div class="carousel-cell"><picture><source srcset="img/kozubnik_.webp" type="image/webp"><img src="img/kozubnik_.png" alt="apartamenty"></picture></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="#" data-category="a" class="item a">
+						</div>
+						<div data-category="a" class="item a">
 							<div class="product-swiper">
 								<div class="carousel-cell"><picture><source srcset="img/DSC08196.webp" type="image/webp"><img src="img/DSC08196.png" alt="apartamenty"></picture></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
-						<a href="#" data-category="a" class="item a">
+						</div>
+						<div data-category="a" class="item a">
 							<div class="product-swiper">
 								<div class="carousel-cell"><picture><source srcset="img/IMG_3250.webp" type="image/webp"><img src="img/IMG_3250.png" alt="apartamenty"></picture></div>
+								<div class="carousel-cell"><picture><source srcset="img/IMG_3250.webp" type="image/webp"><img src="img/IMG_3250.png" alt="apartamenty"></picture></div>
+								<div class="carousel-cell"><picture><source srcset="img/IMG_3250.webp" type="image/webp"><img src="img/IMG_3250.png" alt="apartamenty"></picture></div>
 							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Powierzchnia od 29m2 do 60 m2</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
 
-						</a>
+						</div>
 					</div>
-					<a href="#" class="btn-gold">Zobacz wszystkie</a>
+					<div class="btn-gold">Zobacz wszystkie</div>
 				</div>
 			</section>
 			<section class="block_main">
@@ -409,22 +446,69 @@
 				</div>
 			</section>
 			<section class="level_main ">
-				<div class="level__container">
-					<div>
-						<h2 class="title title-line">
-							<span>Rośniemy </span>dla Was
-						</h2>
-						<div class="level-box element-animation">
-							<p><span>10 </span> apartamentów</p>
-							<p><span>2</span> miasta</p>
-							<p><span>150</span> rezerwacji</p>
-							<p><span>20 000 zł</span> wypłaconych prowizji</p>
+				<div class="swiper mySwiperlevel">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class=" level__container">
+								<div>
+									<h2 class="title title-line">
+										<span>Rośniemy </span>dla Was
+									</h2>
+									<div class="level-box element-animation">
+										<p><span>10 </span> apartamentów</p>
+										<p><span>2</span> miasta</p>
+										<p><span>150</span> rezerwacji</p>
+										<p><span>20 000 zł</span> wypłaconych prowizji</p>
+									</div>
+								</div>
+								<div class="circle-container circle-animation">
+									<div class="text">2020</div>
+								</div>
+
+
+							</div>
 						</div>
-					</div>
-					<div class="circle-container circle-animation">
-						<div class="text">2020</div>
-					</div>
-				</div>
+
+						<div class="swiper-slide">
+							<div class=" level__container">
+								<div>
+									<h2 class="title title-line">
+										<span>Rośniemy </span>dla Was
+									</h2>
+									<div class="level-box element-animation">
+										<p><span>10 </span> apartamentów</p>
+										<p><span>2</span> miasta</p>
+										<p><span>150</span> rezerwacji</p>
+										<p><span>20 000 zł</span> wypłaconych prowizji</p>
+									</div>
+								</div>
+								<div class="circle-container circle-animation">
+									<div class="text">2020</div>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class=" level__container">
+								<div>
+									<h2 class="title title-line">
+										<span>Rośniemy </span>dla Was
+									</h2>
+									<div class="level-box element-animation">
+										<p><span>10 </span> apartamentów</p>
+										<p><span>2</span> miasta</p>
+										<p><span>150</span> rezerwacji</p>
+										<p><span>20 000 zł</span> wypłaconych prowizji</p>
+									</div>
+								</div>
+								<div class="circle-container circle-animation">
+									<div class="text">2020</div>
+								</div>
+
+
+							</div>
+						</div>
 			</section>
 			<section class="block_main">
 				<div class="block__container box-row">
@@ -673,12 +757,12 @@
 			</div>
 		</footer>
 	</div>
+	<!-- <div class="map-popup">
+   <img class="close-popup" src="img/icons/close.svg" alt="close">
+   <div id="map"></div>
+</div> -->
 	<div class="map-popup">
-		<img class="close-popup" src="img/icons/close.svg" alt="close">
-		<div id="map"></div>
-	</div>
-	<div class="map-popup">
-		<img class="close-popup" src="img/icons/close.svg" alt="close">
+		<img class="close-popup" data-close src="img/icons/close.svg" alt="close">
 		<div id="map2"></div>
 	</div>
 	<div class="filters-popup">
@@ -688,15 +772,15 @@
 		</span>
 		<h4>Przedział cenowy</h4>
 		<form action="" id="myForm">
-			<input type="range" class="js-range-slider range-filter" name="my_range" value="" data-type="double" data-min="0" data-max="1000" data-from="200" data-to="500" />
+			<input type="range" class="js-range-slider range-filter" name="my_range" value="" data-type="double" data-min="0" data-max="9999" data-from="200" data-to="9999" />
 			<div class="cena-filter">
 				<div>
 					<label for="cena">cena min.</label>
-					<input autocomplete="off" type="number" name="cena" data-error="Error" placeholder="zł 40" class="cena-filter-input">
+					<input autocomplete="off" type="text" id="cena-number1" name="cena" data-error="Error" placeholder="zł 40" class="cena-filter-input">
 				</div>
 				<div>
 					<label for="cena2">cena maks.</label>
-					<input autocomplete="off" type="number" name="cena2" data-error="Error" placeholder="zł 25000+" class="cena-filter-input">
+					<input autocomplete="off" type="text" id="cena-number2" name="cena2" data-error="Error" placeholder="zł 25000+" class="cena-filter-input">
 				</div>
 			</div>
 			<span class="border-row">
@@ -1113,15 +1197,15 @@
 
 
 	</div>
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230705181248" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230705181248"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230707214722" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230707214722"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20230707214722"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230707214722"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230707214722" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230707214722"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230707214722"></script>
 
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230705181248"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230705181248" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230705181248"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230705181248"></script>
-	<script src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js?_v=20230705181248"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230705181248"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230707214722"></script>
 </body>
 
 </html>
