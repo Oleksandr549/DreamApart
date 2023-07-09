@@ -5,17 +5,17 @@
 	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230707214722" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230709220113" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230707214722">
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230707214722">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230709220113">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230709220113">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230707214722" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230709220113" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230707214722" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20230707214722">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230709220113" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20230709220113">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
 
 							</button>
 
-							<button type="button" class="filter_btn" id="myDatePicker">Termin</button>
+							<button type="button" class="filter_btn filter_btns" id="myDatePicker">Termin</button>
 							<button type="button" class="filter_btn filter_btns">Ilość osób
 
 							</button>
@@ -66,15 +66,16 @@
 								<li>Lorem, ipsum.</li>
 								<a href="#" class="btn-gold btn-close-filter">Wybierz</a>
 							</ul>
+							<span class="filter-content" style="display: none;"></span>
 							<ul class="filter-content content-people">
 								<li><span>Dorosli</span>
 									<div class="ci-input-number age">
-										<input class="ci-number" name="children" type="number" min="0" value="0" step="1">
+										<input class="ci-number" name="children" type="text" min="0" value="0" step="1">
 									</div>
 								</li>
 								<li><span>Dzieci</span>
 									<div class="ci-input-number age">
-										<input class="ci-number" name="children" type="number" min="0" value="0" step="1">
+										<input class="ci-number" name="children" type="text" min="0" value="0" step="1">
 									</div>
 								</li>
 								<a href="#" class="btn-gold btn-close-filter">Wybierz</a>
@@ -211,22 +212,41 @@
 							</a>
 
 						</div>
-						<div data-category="b" class="item item-big b">
-							<div class="product-swiper" data-flickity='{ "autoPlay": true }'>
-								<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
-								<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
-								<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
-							</div>
-							<h2>
-								Szczyrk, ul. Pod Stokiem 10
-							</h2>
-							<p>50 apartamentów</p>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, dignissimos.</p>
-							<div class="item_cena">
-								<p>Od 100 zł/noc</p>
-								<p><span class="icon-star"></span>5,0</p>
-							</div>
+						<div data-category="b" class="item item-big b product-swiper" data-flickity='{ "autoPlay": true ,"prevNextButtons": false ,"pageDots": false }'>
+							<div class="carousel-cell">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, dignissimos.</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
 
+							</div>
+							<div class="carousel-cell">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source srcset="img/pexels-kevin-bidwell-1692861.webp" type="image/webp"><img src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, dignissimos.</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</div>
 						</div>
 						<div data-category="b" class="item b">
 							<div class="product-swiper">
@@ -787,7 +807,7 @@
 			</span>
 			<h4>Pokoje i łóżka</h4>
 			<h6>Sypialnie</h6>
-			<div class="radio">
+			<div class="radio radio-room1">
 
 
 				<div>
@@ -821,7 +841,7 @@
 
 			</div>
 			<h6>Pokoje</h6>
-			<div class="radio">
+			<div class="radio  radio-room2">
 
 
 				<div>
@@ -855,7 +875,7 @@
 
 			</div>
 			<h6>Łazienki</h6>
-			<div class="radio">
+			<div class="radio  radio-room3">
 
 
 				<div>
@@ -1197,15 +1217,15 @@
 
 
 	</div>
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230707214722" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230707214722"></script>
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20230707214722"></script>
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230707214722"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230707214722" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230707214722"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230707214722"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230709220113" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230709220113"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20230709220113"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230709220113"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230709220113" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?_v=20230709220113"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230709220113"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230707214722"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230709220113"></script>
 </body>
 
 </html>

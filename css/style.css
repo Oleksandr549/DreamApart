@@ -988,7 +988,7 @@ header.header-min .header-bottom {
 .content-people {
   cursor: default;
 }
-.content-people input[type=number]::-webkit-inner-spin-button {
+.content-people input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .content-people li {
@@ -1012,6 +1012,7 @@ header.header-min .header-bottom {
   outline: 0;
 }
 .content-people .ci-input-number input {
+  max-width: 50px;
   font-size: 12px;
   font-weight: 700;
   z-index: 1;
@@ -1361,11 +1362,16 @@ header.header-min .header-bottom {
 .nav_search.active .input-search {
   transition: all 0.2s ease 0s;
   width: 100%;
-  padding: 0 5px;
-  border: #122B2E 1px solid;
+  padding: 15px 10px;
+  border: #CB9842 1px solid;
 }
 .nav_search.active .input-search:focus, .nav_search.active .input-search:active {
-  border: #CB9842 2px solid;
+  border: #CB9842 1px solid;
+}
+
+.search {
+  display: flex;
+  align-items: center;
 }
 
 .input-search {
@@ -1380,6 +1386,16 @@ header.header-min .header-bottom {
 }
 .icon-lupa {
   cursor: pointer;
+}
+
+.btn-map.hide {
+  display: none;
+  opacity: 0;
+}
+
+.btn-filters1.hide {
+  display: none;
+  opacity: 0;
 }
 
 @media (min-width: 103.75em) {
@@ -3297,6 +3313,8 @@ header.header-min .header-bottom {
 .form__container2 .form-step .checkbox {
   position: relative;
   margin-right: 10px;
+  height: 0;
+  width: 0;
 }
 .form__container2 .form-step .checkbox::before {
   position: absolute;
@@ -3543,7 +3561,7 @@ header.header-min .header-bottom {
 .form__container2 .btn-gold {
   padding: 10px 50px;
 }
-.filters-popup input[type=checkbox] {
+.filters-popup input.checkbox {
   height: 0;
   width: 0;
 }
@@ -3646,7 +3664,7 @@ header.header-min .header-bottom {
   font-weight: 700;
   text-align: center;
 }
-.filters-popup input[type=number]::-webkit-inner-spin-button {
+.filters-popup input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .filters-popup h4 {
@@ -3661,7 +3679,8 @@ header.header-min .header-bottom {
   line-height: 130%;
   color: #122B2E;
   font-weight: 700;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
 .filters-popup .irs--round {
   width: 100%;
@@ -3783,23 +3802,20 @@ header.header-min .header-bottom {
 .filters-popup .radio div:first-child {
   margin-right: 30px;
 }
-.filters-popup .radio div:first-child input[type=radio]::before {
-  padding: 15px 55px;
-}
 .filters-popup .radio > div {
   position: relative;
   margin-left: 47px;
 }
-.filters-popup .radio > div input[type=radio] {
+.filters-popup .radio > div input {
   outline: none;
 }
-.filters-popup .radio > div input[type=radio]:checked::before {
+.filters-popup .radio > div input:checked::before {
   color: white;
   background: #CB9842;
   border: 1px solid #CB9842;
 }
-.filters-popup .radio > div input[type=radio]::before {
-  content: "";
+.filters-popup .radio > div label {
+  cursor: pointer;
   font-size: 14px;
   color: #122B2E;
   position: absolute;
@@ -3810,18 +3826,12 @@ header.header-min .header-bottom {
   border-radius: 30px;
   background: white;
   border: 1px solid #CB9842;
-}
-.filters-popup .radio > div label {
-  font-size: 14px;
-  color: #122B2E;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-weight: 900;
+}
+.filters-popup .radio > div label:hover, .filters-popup .radio > div label.active, .filters-popup .radio > div label:checked {
+  color: white;
+  background: #CB9842;
 }
 .filters-popup .radio2 {
   display: flex;
@@ -3849,17 +3859,17 @@ header.header-min .header-bottom {
     flex: 1 0 150px;
   }
 }
-.filters-popup .radio2 > div input[type=radio] {
+.filters-popup .radio2 > div input {
   outline: none;
   width: 100%;
   margin-top: 150px;
   margin-bottom: 20px;
 }
-.filters-popup .radio2 > div input[type=radio]:checked::before {
+.filters-popup .radio2 > div input:checked::before {
   color: white;
   border: 3px solid #CB9842;
 }
-.filters-popup .radio2 > div input[type=radio]::before {
+.filters-popup .radio2 > div input::before {
   content: "";
   font-size: 14px;
   color: #122B2E;
@@ -4090,7 +4100,11 @@ header.header-min .header-bottom {
   justify-content: center;
 }
 .product_main .product_list .item.item-big {
+  max-height: 367px;
   grid-column: 2/span 2;
+}
+.product_main .product_list .item.item-big > div {
+  width: 100%;
 }
 @media (max-width: 47.99875em) {
   .product_main .product_list .item.item-big {
