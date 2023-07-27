@@ -5,17 +5,17 @@
 	<title>Product</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230714141507" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20230728003008" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230714141507">
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230714141507">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230728003008">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20230728003008">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230714141507" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230728003008" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230714141507" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20230714141507">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230728003008" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20230728003008">
 </head>
 
 <body>
@@ -45,25 +45,38 @@
 
 						<div class="logo"><img src="img/zloty poziom nie haslo.png" alt="logo"></div>
 						<div class="filters">
-							<button type="button" class="filter_btn filter_btns">Miejsce
+							<button type="button" class="filter_btn filter_btns filter-city-btn">Miejsce
 
 							</button>
 
-							<button type="button" class="filter_btn filter_btns" id="myDatePicker">Termin</button>
-							<button type="button" class="filter_btn filter_btns">Ilość osób
+							<button type="button" class="filter_btn filter_btns filter-btn-termit"> <input id="myDatePicker" type="text" placeholder="      Termin"> </button>
+							<button type="button" class="filter_btn filter_btns filter-btn-people">Ilość osób
 
 							</button>
 
-							<button type="button" class="filter_btn filter-btn-active"><span class="icon-filter"></span><span>Wyszukaj</span></button>
+							<button type="button" class="filter_btn  filter-btn-active"><span class="icon-filter"></span><span>Wyszukaj</span></button>
 							<ul class="filter-content content-city">
-								<li>Lorem, ipsum.</li>
-								<li>Lorem, ipsum.</li>
-								<li>Lorem, ipsum.</li>
-								<li>Lorem, ipsum.</li>
-								<li>Lorem, ipsum.</li>
-								<li>Lorem, ipsum.</li>
-								<li>Lorem, ipsum.</li>
-								<li>Lorem, ipsum.</li>
+								<div>
+									<input autocomplete="off" id="radio-city-1" type="radio" name="radio-1" data-error="Error" placeholder="">
+									<label for="radio-city-1">Lorem, ipsum1.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-2" type="radio" name="radio-1" data-error="Error" placeholder="">
+									<label for="radio-city-2">Lorem, ipsum2.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-3" type="radio" name="radio-1" data-error="Error" placeholder="">
+									<label for="radio-city-3">Lorem, ipsum3.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-4" type="radio" name="radio-1" data-error="Error" placeholder="">
+									<label for="radio-city-4">Lorem, ipsum4.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-5" type="radio" name="radio-1" data-error="Error" placeholder="">
+									<label for="radio-city-5">Lorem, ipsum5.</label>
+								</div>
+
 								<a href="#" class="btn-gold btn-close-filter">Wybierz</a>
 							</ul>
 							<span class="filter-content" style="display: none;"></span>
@@ -78,10 +91,9 @@
 										<input class="ci-number" name="children" type="text" min="0" value="0" step="1">
 									</div>
 								</li>
-								<a href="#" class="btn-gold btn-close-filter">Wybierz</a>
+								<a href="#" class="btn-gold btn-close-filter btn-people">Wybierz</a>
 							</ul>
 						</div>
-
 
 						<div class="menu">
 
@@ -104,14 +116,14 @@
 										<img class="close" src="img/icons/close.svg" alt="close">
 									</div>
 									<ul class="nav-list">
-										<li class="nav-item active"><a href="index.html">Home</a></li>
-										<li class="nav-item"><a href="event.html">Wydarzenia</a></li>
-										<li class="nav-item"><a href="media.html">Media</a></li>
+										<li class="nav-item active"><a href="index.html">Strona główna</a></li>
+										<li class="nav-item"><a href="#">Obiekty</a></li>
+										<li class="nav-item"><a href="#">Oferty specjalne</a></li>
 
-										<li class="nav-item"><a href="listing-of-events.html">NOF Church</a></li>
-										<li class="nav-item"><a href="#"><span class=" _icon-cart"></span>Store </a></li>
-										<li class="nav-item"><a href="contact.html">Kontact</a></li>
-										<li class="nav-item"><a href="support.html">Wspieram</a></li>
+										<li class="nav-item"><a href="#">Współpraca</a></li>
+										<li class="nav-item"><a href="#"><span class=" _icon-cart"></span>Blog </a></li>
+										<li class="nav-item"><a href="#">Panel właściciela</a></li>
+										<li class="nav-item"><a href="#">Kontakt</a></li>
 									</ul>
 								</div>
 
@@ -256,7 +268,7 @@
 							<picture><source srcset="img/IMG_2435.webp" type="image/webp"><img src="img/IMG_2435.png" alt="img"></picture>
 						</div>
 
-						<button type="button" class="btn-more-swiper">+ <span class="image-counter"></span> zdjęć</button>
+						<button type="button" class="btn-more-swiper"><span class="image-counter"></span> zdjęć</button>
 					</div>
 					<div class="swiper-button-next-product-cart"><span class="icon-p-right"></span></div>
 					<div class="swiper-button-prev-product-cart"><span class="icon-p-left"></span></div>
@@ -357,26 +369,28 @@
 							</h4>
 							<p class="green">W tym obiekcie znajduje się 30 apartamentów</p>
 
-							<p class="text-hide">Apartamenty Pod Orzechem to wyjątkowe miejsce na mapie Ustronia! Apartamenty
-								znajdują
-								się w domu z dużym ogrodem, pełnym drzew i jabłoni. Spokój panujący w tym miejscu jest naprawdę
-								wyjątkowy! Dodatkowo każdy gość ma dostęp do grilla i mebli ogrodowych z leżakami, a w strefie
-								ogólnodostępnej znajduje się pralnia.<br><br> Apartament Pod Orzechem 2 to komfortowy, nowy
-								apartament
-								z jedną
-								sypialnią, idealny dla 4 osób, o powierzchni 30 m². <br><br>
-								Apartament znajduje się na parterze i posiada:
-								Salon z rozkładaną sofą, stolik kawowy, TV. Kuchnia połączona z salonem jest w pełni wyposażona -
-								znajduje się tu lodówka, czajnik, zlewozmywak, płyta kuchenna, kosz na śmieci, talerze, sztućce,
-								kubki, szklanki na napoje, garnki, patelnie, kieliszki, przybory kuchenne, mikrofalówka, ekspres do
-								kawy, zmywarka, stół z krzesłami. Sypialnia z łóżkiem małżeńskim, szafki nocne, lampki oraz komodą.
-								Łazienka z prysznicem, umywalką, WC. Pralka w pomieszczeniu ogólnodostępnym do dyspozycji gości z
-								obu
-								apartamentów. Parking przed budynkiem. Apartament położony jest w cichej i spokojnej okolicy, z
-								przepięknym widokiem na panoramę gór. Istnieje możliwość wykupienia drugiego apartamentu w tym
-								samym
-								obiekcie, oraz posiadanie domku dla 10 osób na własność! 1,5 km od Rzeki Wisły, 2 km od Rynku w
-								Ustroniu, 2,5 km od sklepu Lidl, 6,5 km od stacji narciarskiej na Czantorii.</p>
+							<div class="text-hide">
+								<p>Apartamenty Pod Orzechem to wyjątkowe miejsce na mapie Ustronia! Apartamenty
+									znajdują
+									się w domu z dużym ogrodem, pełnym drzew i jabłoni. Spokój panujący w tym miejscu jest naprawdę
+									wyjątkowy! Dodatkowo każdy gość ma dostęp do grilla i mebli ogrodowych z leżakami, a w strefie
+									ogólnodostępnej znajduje się pralnia.<br><br> Apartament Pod Orzechem 2 to komfortowy, nowy
+									apartament
+									z jedną
+									sypialnią, idealny dla 4 osób, o powierzchni 30 m².</p>
+								<p> Apartament znajduje się na parterze i posiada:
+									Salon z rozkładaną sofą, stolik kawowy, TV. Kuchnia połączona z salonem jest w pełni wyposażona -
+									znajduje się tu lodówka, czajnik, zlewozmywak, płyta kuchenna, kosz na śmieci, talerze, sztućce,
+									kubki, szklanki na napoje, garnki, patelnie, kieliszki, przybory kuchenne, mikrofalówka, ekspres do
+									kawy, zmywarka, stół z krzesłami. Sypialnia z łóżkiem małżeńskim, szafki nocne, lampki oraz komodą.
+									Łazienka z prysznicem, umywalką, WC. Pralka w pomieszczeniu ogólnodostępnym do dyspozycji gości z
+									obu
+									apartamentów. Parking przed budynkiem. Apartament położony jest w cichej i spokojnej okolicy, z
+									przepięknym widokiem na panoramę gór. Istnieje możliwość wykupienia drugiego apartamentu w tym
+									samym
+									obiekcie, oraz posiadanie domku dla 10 osób na własność! 1,5 km od Rzeki Wisły, 2 km od Rynku w
+									Ustroniu, 2,5 km od sklepu Lidl, 6,5 km od stacji narciarskiej na Czantorii.</p>
+							</div>
 
 
 
@@ -1565,16 +1579,16 @@
 
 
 	</div>
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230714141507" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230714141507"></script>
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20230714141507"></script>
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230714141507"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230714141507" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230728003008" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230728003008"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20230728003008"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20230728003008"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20230728003008" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230714141507"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js?_v=20230714141507" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230728003008"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js?_v=20230728003008" defer></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230714141507"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230728003008"></script>
 	<script>
 		window.onload = function() {
 			if (document.querySelector('#map') !== null) {

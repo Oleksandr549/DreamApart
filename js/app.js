@@ -33,7 +33,7 @@
     v = "lgBeforePrevSlide",
     y = "lgBeforeClose",
     b = "lgAfterClose",
-    w = {
+    S = {
       mode: "lg-slide",
       easing: "ease",
       speed: 400,
@@ -107,7 +107,7 @@
         playVideo: "Play video",
       },
     };
-  var S = (function () {
+  var w = (function () {
     function t(t) {
       return (
         (this.cssVenderPrefixes = [
@@ -432,7 +432,7 @@
         (Element.prototype.matches =
           Element.prototype.msMatchesSelector ||
           Element.prototype.webkitMatchesSelector),
-      new S(t)
+      new w(t)
     );
   }
   var I = [
@@ -461,7 +461,7 @@
     "disqusIdentifier",
     "disqusUrl",
   ];
-  function x(t) {
+  function E(t) {
     return "href" === t
       ? "src"
       : (t = (t =
@@ -470,7 +470,7 @@
           return t[1].toUpperCase();
         }));
   }
-  var E = function (t, e, i, s) {
+  var x = function (t, e, i, s) {
       void 0 === i && (i = 0);
       var o = C(t).attr("data-lg-size") || s;
       if (o) {
@@ -576,7 +576,7 @@
         }));
       return "" + l + r;
     },
-    O = function (t) {
+    q = function (t) {
       for (var e = [], i = [], s = "", o = 0; o < t.length; o++) {
         var n = t[o].split(" ");
         "" === n[0] && n.splice(0, 1), i.push(n[0]), e.push(n[1]);
@@ -588,7 +588,7 @@
         }
       return s;
     },
-    q = function (t) {
+    O = function (t) {
       return !!t && !!t.complete && 0 !== t.naturalWidth;
     },
     A = function (t, e, i, s, o) {
@@ -638,7 +638,7 @@
           for (var e = {}, r = 0; r < t.attributes.length; r++) {
             var l = t.attributes[r];
             if (l.specified) {
-              var a = x(l.name),
+              var a = E(l.name),
                 d = "";
               n.indexOf(a) > -1 && (d = a), d && (e[d] = l.value);
             }
@@ -719,7 +719,7 @@
       return (
         (I.prototype.generateSettings = function (e) {
           if (
-            ((this.settings = t(t({}, w), e)),
+            ((this.settings = t(t({}, S), e)),
             this.settings.isMobile &&
             "function" == typeof this.settings.isMobile
               ? this.settings.isMobile()
@@ -764,7 +764,7 @@
               e = function (e) {
                 var s = i.items[e],
                   o = C(s),
-                  n = S.generateUUID();
+                  n = w.generateUUID();
                 o.attr("data-lg-id", n).on(
                   "click.lgcustom-item-" + n,
                   function (i) {
@@ -957,7 +957,7 @@
               i = e.top,
               s = e.bottom;
             if (
-              ((this.currentImageSize = E(
+              ((this.currentImageSize = x(
                 this.items[this.index],
                 this.outer,
                 i + s,
@@ -1073,7 +1073,7 @@
             var h = this.galleryItems[t].__slideVideoInfo;
             this.zoomFromOrigin &&
               e &&
-              ((this.currentImageSize = E(
+              ((this.currentImageSize = x(
                 e,
                 this.outer,
                 d + c,
@@ -1297,7 +1297,7 @@
         }),
         (I.prototype.onSlideObjectLoad = function (t, e, i, s) {
           var o = t.find(".lg-object").first();
-          q(o.get()) || e
+          O(o.get()) || e
             ? i()
             : (o.on("load.lg error.lg", function () {
                 i && i();
@@ -1365,7 +1365,7 @@
             u = g && "string" == typeof g ? JSON.parse(g) : g;
           if (n.responsive) {
             var m = n.responsive.split(",");
-            h = O(m) || h;
+            h = q(m) || h;
           }
           var p = n.__slideVideoInfo,
             f = "",
@@ -1381,16 +1381,16 @@
             !r.hasClass("lg-loaded"))
           ) {
             if (p) {
-              var w = this.mediaContainerPosition,
-                S = w.top,
-                I = w.bottom,
-                x = E(
+              var S = this.mediaContainerPosition,
+                w = S.top,
+                I = S.bottom,
+                E = x(
                   this.items[t],
                   this.outer,
-                  S + I,
+                  w + I,
                   p && this.settings.videoMaxSize
                 );
-              f = this.getVideoContStyle(x);
+              f = this.getVideoContStyle(E);
             }
             if (v) {
               var L = T(
@@ -1403,12 +1403,12 @@
               );
               r.prepend(L);
             } else if (l) {
-              var q = "";
+              var O = "";
               y &&
                 this.zoomFromOrigin &&
                 this.currentImageSize &&
-                (q = this.getDummyImageContent(r, t, ""));
-              L = A(l, q || "", f, this.settings.strings.playVideo, p);
+                (O = this.getDummyImageContent(r, t, ""));
+              L = A(l, O || "", f, this.settings.strings.playVideo, p);
               r.prepend(L);
             } else if (p) {
               L = '<div class="lg-video-cont " style="' + f + '"></div>';
@@ -1623,7 +1623,7 @@
                 var u = this.mediaContainerPosition,
                   m = u.top,
                   p = u.bottom,
-                  f = E(
+                  f = x(
                     this.items[t],
                     this.outer,
                     m + p,
@@ -2080,7 +2080,7 @@
               l = this.galleryItems[this.index],
               a = l.__slideVideoInfo,
               d = l.poster,
-              c = E(s, this.outer, n + r, a && d && this.settings.videoMaxSize);
+              c = x(s, this.outer, n + r, a && d && this.settings.videoMaxSize);
             i = L(s, this.outer, n, r, c);
           }
           this.zoomFromOrigin && i
@@ -2350,6 +2350,26 @@
             });
           });
       }
+      if (null !== document.querySelector(".content-city")) {
+        const h = document.querySelectorAll(".content-city > div label");
+        document.querySelectorAll(".content-city > div input");
+        h.forEach((t, e) => {
+          t.addEventListener("click", () => {
+            return (
+              (t = e),
+              void h.forEach((e, i) => {
+                e.classList.contains("active")
+                  ? e.classList.remove("active", i === t)
+                  : (e.classList.toggle("active", i === t),
+                    i === t &&
+                      (document.querySelector(".filter-city-btn").textContent =
+                        e.textContent));
+              })
+            );
+            var t;
+          });
+        });
+      }
       if (
         (null !== document.querySelector(".js-range-slider") &&
           $(".js-range-slider").ionRangeSlider({
@@ -2400,57 +2420,59 @@
           })(jQuery),
         null !== document.querySelector(".search"))
       ) {
-        const h = document.querySelectorAll("[data-search]"),
-          g = document.querySelector(".search"),
-          u = document.querySelector(".btn-map"),
-          m = document.querySelector(".btn-filters1");
-        function p() {
-          g.classList.remove("active"),
+        const g = document.querySelectorAll("[data-search]"),
+          u = document.querySelector(".header"),
+          m = u.querySelector(".search"),
+          p = u.querySelector(".btn-map"),
+          f = u.querySelector(".btn-filters1");
+        function v() {
+          m.classList.remove("active"),
             setTimeout(function () {
-              g.classList.contains("active") ||
-                (u.classList.remove("hide"), m.classList.remove("hide"));
+              m.classList.contains("active") ||
+                (null !== p && p.classList.remove("hide"),
+                null !== f && f.classList.remove("hide"));
             }, 500);
         }
-        function f() {
-          g.classList.add("active"),
-            u.classList.add("hide"),
-            m.classList.add("hide");
+        function y() {
+          m.classList.add("active"),
+            p.classList.add("hide"),
+            f.classList.add("hide");
         }
-        h.forEach((t) => {
-          t.addEventListener("click", f);
+        g.forEach((t) => {
+          t.addEventListener("click", y);
         }),
           document.addEventListener("click", (t) => {
-            const e = g.contains(t.target),
-              i = Array.from(h).some((e) => e.contains(t.target));
-            e || i || p();
+            const e = m.contains(t.target),
+              i = Array.from(g).some((e) => e.contains(t.target));
+            e || i || v();
           }),
           document.addEventListener("keydown", (t) => {
-            "Escape" === t.code && g.classList.contains("active") && p();
+            "Escape" === t.code && m.classList.contains("active") && v();
           });
       }
       if (null !== document.querySelector(".map-popup")) {
-        const v = document.querySelectorAll("[data-modal]"),
-          y = document.querySelector(".map-popup"),
-          b = y.querySelectorAll("[data-close]");
-        function w() {
-          y.classList.remove("active"), (document.body.style.overflow = "");
+        const b = document.querySelectorAll("[data-modal]"),
+          S = document.querySelector(".map-popup"),
+          w = S.querySelectorAll("[data-close]");
+        function C() {
+          S.classList.remove("active"), (document.body.style.overflow = "");
         }
-        function S() {
-          y.classList.add("active"), (document.body.style.overflow = "hidden");
+        function I() {
+          S.classList.add("active"), (document.body.style.overflow = "hidden");
         }
-        v.forEach((t) => {
-          t.addEventListener("click", S);
+        b.forEach((t) => {
+          t.addEventListener("click", I);
         }),
-          b.forEach((t) => {
-            t.addEventListener("click", w);
+          w.forEach((t) => {
+            t.addEventListener("click", C);
           }),
           document.addEventListener("click", (t) => {
-            const e = y.contains(t.target),
-              i = Array.from(v).some((e) => e.contains(t.target));
-            e || i || w();
+            const e = S.contains(t.target),
+              i = Array.from(b).some((e) => e.contains(t.target));
+            e || i || C();
           }),
           document.addEventListener("keydown", (t) => {
-            "Escape" === t.code && y.classList.contains("active") && w();
+            "Escape" === t.code && S.classList.contains("active") && C();
           });
       }
       if (null !== document.querySelector(".mySwiper-media")) {
@@ -2492,15 +2514,15 @@
         });
       }
       if (null !== document.querySelector(".circle-container")) {
-        function C(t) {
+        function E(t) {
           t.forEach((t) => {
-            t.isIntersecting && (t.target.classList.add("active"), E());
+            t.isIntersecting && (t.target.classList.add("active"), T());
           });
         }
-        let I = new IntersectionObserver(C, { threshold: [0.6] }),
-          x = document.querySelectorAll(".circle-animation");
-        for (let L of x) I.observe(L);
-        function E() {
+        let x = new IntersectionObserver(E, { threshold: [0.6] }),
+          L = document.querySelectorAll(".circle-animation");
+        for (let k of L) x.observe(k);
+        function T() {
           document.querySelectorAll(".circle-container").forEach((t) => {
             if (t.classList.contains("active")) {
               const e = 36,
@@ -2526,37 +2548,40 @@
         }
       }
       if (null !== document.querySelector(".element-animation")) {
-        function T(t) {
+        function q(t) {
           t.forEach((t) => {
             t.isIntersecting
               ? t.target.classList.add("active")
               : t.target.classList.remove("active");
           });
         }
-        let k = new IntersectionObserver(T, { threshold: [0.6] }),
-          O = document.querySelectorAll(".element-animation");
-        for (let q of O) k.observe(q);
+        let O = new IntersectionObserver(q, { threshold: [0.6] }),
+          A = document.querySelectorAll(".element-animation");
+        for (let D of A) O.observe(D);
       }
       if (null !== document.querySelector(".burger_menu")) {
-        const A = document.querySelector(".nav-container"),
-          D = document.querySelector(".header-top"),
-          M = document.querySelector(".close");
+        const M = document.querySelector(".nav-container"),
+          z = document.querySelector(".header-top"),
+          P = document.querySelector(".close");
         document
           .querySelector(".burger_menu")
           .addEventListener("click", function () {
-            A.classList.toggle("active"), D.classList.toggle("active");
+            M.classList.toggle("active"), z.classList.toggle("active");
           }),
-          M.addEventListener("click", function () {
-            A.classList.remove("active"), D.classList.toggle("active");
+          P.addEventListener("click", function () {
+            M.classList.remove("active"), z.classList.toggle("active");
           });
       }
       if (null !== document.querySelector(".btn-moreText")) {
-        const z = document.querySelector(".text-hide"),
-          P = document.querySelector(".btn-moreText");
-        z.classList.add("active"),
-          P.addEventListener("click", function () {
-            z.classList.toggle("active");
-          });
+        const _ = document.querySelector(".text-hide"),
+          G = document.querySelector(".btn-moreText");
+        G.addEventListener("click", function () {
+          _.classList.toggle("active"),
+            G.classList.toggle("active"),
+            _.classList.contains("active")
+              ? (console.log(1), (G.textContent = "Ukryj opis"))
+              : (G.textContent = "Rozwiń opis");
+        });
       }
       if (
         (null !== document.querySelector(".header-bottom_filters") &&
@@ -2572,19 +2597,19 @@
           }),
         null !== document.querySelector(".header-top"))
       ) {
-        const _ = document.querySelector(".header-top").offsetHeight + "px";
-        document.querySelector(".nav-container").style.marginTop = _;
+        const B = document.querySelector(".header-top").offsetHeight + "px";
+        document.querySelector(".nav-container").style.marginTop = B;
       }
       if (null !== document.querySelector(".page")) {
-        const G = document.querySelector(".header").offsetHeight + "px";
-        document.querySelector(".page").style.marginTop = G;
+        const F = document.querySelector(".header").offsetHeight + "px";
+        document.querySelector(".page").style.marginTop = F;
       }
       const t =
         window.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
       if (null !== document.querySelector(".btn-more-swiper") && t > 390) {
-        function B() {
+        function H() {
           const t = document.querySelector(".image-counter"),
             e = document
               .querySelector(".product-cart-swiper")
@@ -2594,7 +2619,7 @@
               document.documentElement.clientWidth ||
               document.body.clientWidth;
           let s = e.querySelectorAll(".swiper-slide").length,
-            o = 5;
+            o = (e.querySelectorAll(".swiper-slide"), 5);
           i <= 768 && (o = 3),
             e.querySelectorAll(".swiper-slide").forEach(function (t) {
               t.classList.add("d-none");
@@ -2606,31 +2631,42 @@
               }),
             e
               .querySelector(".btn-more-swiper")
-              .addEventListener("click", function (t) {
-                t.preventDefault(),
-                  (o = o + 99 <= s ? o + 99 : s),
-                  setTimeout(
-                    function () {
-                      e
-                        .querySelectorAll(
-                          ".swiper-slide:nth-child(-n+" + o + ")"
-                        )
-                        .forEach(function (t) {
-                          t.classList.remove("d-none");
-                        }),
-                        e.querySelectorAll(".swiper-slide:not(.d-none)")
-                          .length == s && this.parentNode.removeChild(this);
-                    }.bind(this),
-                    500
-                  );
+              .addEventListener("click", function (n) {
+                e.querySelectorAll(".swiper-slide:not(.d-none)").length == s
+                  ? ((o = 5),
+                    i <= 768 && (o = 3),
+                    e.querySelectorAll(".swiper-slide").forEach(function (t) {
+                      t.classList.add("d-none");
+                    }),
+                    e
+                      .querySelectorAll(".swiper-slide:nth-child(-n+" + o + ")")
+                      .forEach(function (t) {
+                        t.classList.remove("d-none");
+                      }),
+                    (t.innerHTML = "+ " + (s - o)))
+                  : (n.preventDefault(),
+                    setTimeout(
+                      function () {
+                        (t.innerHTML = "- " + (s - o)),
+                          (o = o + 99 <= s ? o + 99 : s),
+                          e
+                            .querySelectorAll(
+                              ".swiper-slide:nth-child(-n+" + o + ")"
+                            )
+                            .forEach(function (t) {
+                              t.classList.remove("d-none");
+                            });
+                      }.bind(this),
+                      500
+                    ));
               }),
-            (t.innerHTML = s - o);
+            (t.innerHTML = "+ " + (s - o));
         }
-        B();
+        H();
       }
       if (null !== document.querySelector(".product-cart-swiper") && t <= 391) {
-        const F = document.querySelector(".product-cart-swiper");
-        console.log(t), F.classList.add("swiper");
+        const V = document.querySelector(".product-cart-swiper");
+        console.log(t), V.classList.add("swiper");
         new Swiper(".product-cart-swiper", {
           slidesPerView: 1,
           speed: 1e3,
@@ -2646,8 +2682,16 @@
       }
       if (null !== document.querySelector("#myDatePicker")) {
         window.innerWidth > 768
-          ? flatpickr("#myDatePicker", { showMonths: 2, mode: "range" })
-          : flatpickr("#myDatePicker", { showMonths: 1, mode: "range" });
+          ? flatpickr("#myDatePicker", {
+              showMonths: 2,
+              mode: "range",
+              dateFormat: "m.d",
+            })
+          : flatpickr("#myDatePicker", {
+              showMonths: 1,
+              mode: "range",
+              dateFormat: "m.d",
+            });
       }
       if (null !== document.querySelector("#myDatePicker2")) {
         window.innerWidth > 768
@@ -2655,39 +2699,39 @@
           : flatpickr("#myDatePicker2", { showMonths: 1, mode: "range" });
       }
       if (null !== document.querySelector(".filters-popup") && t < 768) {
-        const H = document.querySelectorAll(".filter-btn-active"),
-          V = document.querySelectorAll(".filters-popup"),
-          N = document.querySelectorAll(".close-popup2"),
-          j = document.body;
-        H.forEach((t, e) => {
+        const N = document.querySelectorAll(".filter-btn-active"),
+          j = document.querySelectorAll(".filters-popup"),
+          W = document.querySelectorAll(".close-popup2"),
+          R = document.body;
+        N.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              H.forEach((e, i) => {
+              N.forEach((e, i) => {
                 e.classList.toggle("active", i === t);
               }),
-              V.forEach((e, i) => {
+              j.forEach((e, i) => {
                 e.classList.toggle("active", i === t);
               }),
-              V.forEach((t) => {
-                t.classList.contains("active") || (j.style.overflow = "auto");
+              j.forEach((t) => {
+                t.classList.contains("active") || (R.style.overflow = "auto");
               }),
-              void V.forEach((t) => {
-                t.classList.contains("active") && (j.style.overflow = "hidden");
+              void j.forEach((t) => {
+                t.classList.contains("active") && (R.style.overflow = "hidden");
               })
             );
             var t;
           });
         }),
-          N.forEach((t, e) => {
+          W.forEach((t, e) => {
             t.addEventListener("click", () => {
               return (
                 (t = e),
-                V.forEach((e, i) => {
+                j.forEach((e, i) => {
                   e.classList.remove("active", i === t);
                 }),
-                void V.forEach((t) => {
-                  t.classList.contains("active") || (j.style.overflow = "auto");
+                void j.forEach((t) => {
+                  t.classList.contains("active") || (R.style.overflow = "auto");
                 })
               );
               var t;
@@ -2695,42 +2739,42 @@
           });
       }
       if (null !== document.querySelector(".btn-filters1") && t > 768) {
-        const W = document.querySelectorAll(".btn-filters1"),
-          R = document.querySelectorAll(".filters-popup"),
-          Y = document.querySelectorAll(".close-popup2"),
-          U = document.body;
-        W.forEach((t, e) => {
+        const Y = document.querySelectorAll(".btn-filters1"),
+          U = document.querySelectorAll(".filters-popup"),
+          X = document.querySelectorAll(".close-popup2"),
+          K = document.body;
+        Y.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              W.forEach((e, i) => {
+              Y.forEach((e, i) => {
                 e.classList.toggle("active", i === t);
               }),
-              R.forEach((e, i) => {
+              U.forEach((e, i) => {
                 e.classList.toggle("active", i === t);
               }),
-              R.forEach((t) => {
-                t.classList.contains("active") || (U.style.overflow = "auto");
+              U.forEach((t) => {
+                t.classList.contains("active") || (K.style.overflow = "auto");
               }),
-              void R.forEach((t) => {
-                t.classList.contains("active") && (U.style.overflow = "hidden");
+              void U.forEach((t) => {
+                t.classList.contains("active") && (K.style.overflow = "hidden");
               })
             );
             var t;
           });
         }),
-          Y.forEach((t, e) => {
+          X.forEach((t, e) => {
             t.addEventListener("click", () => {
               return (
                 (t = e),
-                R.forEach((e, i) => {
+                U.forEach((e, i) => {
                   e.classList.remove("active", i === t);
                 }),
-                W.forEach((e, i) => {
+                Y.forEach((e, i) => {
                   e.classList.remove("active", i === t);
                 }),
-                void R.forEach((t) => {
-                  t.classList.contains("active") || (U.style.overflow = "auto");
+                void U.forEach((t) => {
+                  t.classList.contains("active") || (K.style.overflow = "auto");
                 })
               );
               var t;
