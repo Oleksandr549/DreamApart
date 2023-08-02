@@ -588,10 +588,10 @@
         }
       return s;
     },
-    O = function (t) {
+    A = function (t) {
       return !!t && !!t.complete && 0 !== t.naturalWidth;
     },
-    A = function (t, e, i, s, o) {
+    O = function (t, e, i, s, o) {
       return (
         '<div class="lg-video-cont ' +
         (o && o.youtube
@@ -1297,7 +1297,7 @@
         }),
         (I.prototype.onSlideObjectLoad = function (t, e, i, s) {
           var o = t.find(".lg-object").first();
-          O(o.get()) || e
+          A(o.get()) || e
             ? i()
             : (o.on("load.lg error.lg", function () {
                 i && i();
@@ -1403,12 +1403,12 @@
               );
               r.prepend(L);
             } else if (l) {
-              var O = "";
+              var A = "";
               y &&
                 this.zoomFromOrigin &&
                 this.currentImageSize &&
-                (O = this.getDummyImageContent(r, t, ""));
-              L = A(l, O || "", f, this.settings.strings.playVideo, p);
+                (A = this.getDummyImageContent(r, t, ""));
+              L = O(l, A || "", f, this.settings.strings.playVideo, p);
               r.prepend(L);
             } else if (p) {
               L = '<div class="lg-video-cont " style="' + f + '"></div>';
@@ -2555,9 +2555,9 @@
               : t.target.classList.remove("active");
           });
         }
-        let O = new IntersectionObserver(q, { threshold: [0.6] }),
-          A = document.querySelectorAll(".element-animation");
-        for (let D of A) O.observe(D);
+        let A = new IntersectionObserver(q, { threshold: [0.6] }),
+          O = document.querySelectorAll(".element-animation");
+        for (let D of O) A.observe(D);
       }
       if (null !== document.querySelector(".burger_menu")) {
         const M = document.querySelector(".nav-container"),
@@ -2779,6 +2779,27 @@
               );
               var t;
             });
+          });
+      }
+      if (null !== document.querySelector(".filter-btn-people")) {
+        const Z = document.querySelectorAll(".btn-add"),
+          J = document.querySelectorAll(".btn-min"),
+          Q = document.querySelectorAll(".ci-number"),
+          tt = document.querySelector(".filter-btn-people");
+        function et(t) {
+          console.log(Q);
+          let e = 0;
+          Q.forEach((t) => {
+            const i = parseFloat(t.value);
+            isNaN(i) || (e += i);
+          }),
+            (tt.textContent = `Ilość osób -\n\n         ${e}`);
+        }
+        Z.forEach((t, e) => {
+          t.addEventListener("click", () => et());
+        }),
+          J.forEach((t, e) => {
+            t.addEventListener("click", () => et());
           });
       }
     }),
